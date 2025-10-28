@@ -1,18 +1,21 @@
-# FreePS
+# FreePS - 免费在线图片编辑器
 
-Online image editor lets you create, edit images using HTML5 technologies. No need to buy, download, install or have obsolete flash. No ads. Key features: layers, filters, HTML5, open source, Photoshop alternative.
+FreePS 是一个功能强大的在线图片编辑器，使用 HTML5 技术构建。无需购买、下载或安装任何软件，完全免费，无广告。
 
-FreePS operates directly in the browser. You can create images, paste from the clipboard (ctrl+v) or upload from the computer (using menu or drag & drop). Nothing will be sent to any server. Everything stays in your browser.
+主要特性：
+- 图层管理
+- 多种滤镜效果
+- 画笔工具
+- 文本编辑
+- 图片裁剪和调整大小
+- 完全在浏览器中运行，数据不上传服务器
+
+## 本地预览
+
+启动本地服务器后访问：http://localhost:8000
 
 
-## Preview
-
-https://geeeeeeeek.github.io/freePS/
-
-https://zaixianps.net/ (中文版)
-
-
-## Browser Support
+## 浏览器支持
 
 - Chrome
 - Firefox
@@ -20,14 +23,15 @@ https://zaixianps.net/ (中文版)
 - Edge
 - Safari
 
-## Deploy
+## 部署说明
 
-Just download this code, upload to your server. home page is index.html
+1. 下载本项目代码
+2. 使用任意 HTTP 服务器运行，主页为 index.html
+3. 或使用 Python 快速启动：`python -m http.server 8000`
 
+## 致谢
 
-## Thanks
-
-https://github.com/viliusle/miniPaint
+本项目基于 [miniPaint](https://github.com/viliusle/miniPaint) 开发
 
 
 
