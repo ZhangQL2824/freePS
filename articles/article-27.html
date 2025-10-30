@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>锐化技术详解：让图像更清晰锐利 - FreePS教程</title>
+    <meta name="description" content="合理的锐化能提升图像清晰度，本文介绍USM锐化、智能锐化等多种锐化方法。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>锐化技术详解：让图像更清晰锐利</h1>
+        <div class="meta">🏷️ 锐化技术 | ⏱️ 阅读时长: 5分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、什么是锐化</h2>
+        <p>锐化是通过增强图像边缘对比度来提升清晰度感的技术。数码照片在拍摄和处理过程中会损失锐度，适当的锐化能让图像看起来更清晰。但过度锐化会产生光晕和噪点，破坏图像质量。</p>
+
+        <h2>二、USM锐化</h2>
+        <p>USM（Unsharp Mask，非锐化蒙版）是最常用的锐化方法。"滤镜 > 锐化 > USM锐化"打开对话框，有三个参数：</p>
+        <ul>
+            <li><strong>数量</strong>：锐化强度，通常50-150%</li>
+            <li><strong>半径</strong>：影响范围，0.5-2像素适合大多数照片</li>
+            <li><strong>阈值</strong>：避免平滑区域过度锐化，通常0-10</li>
+        </ul>
+        <p>推荐设置：人像（数量80%，半径1，阈值5）；风光（数量120%，半径1.5，阈值0）；Web图片（数量100%，半径0.5，阈值0）。</p>
+
+        <h2>三、智能锐化</h2>
+        <p>"滤镜 > 锐化 > 智能锐化"提供更高级的控制。可以选择移除类型（镜头模糊、动态模糊、高斯模糊），并分别控制高光和阴影的锐化程度，避免高光过度锐化。</p>
+
+        <h2>四、高反差保留锐化</h2>
+        <p>这是专业摄影师常用的非破坏性锐化方法：</p>
+        <ol>
+            <li>复制图层，"滤镜 > 其他 > 高反差保留"，半径1-3像素</li>
+            <li>将图层混合模式改为"叠加"或"柔光"</li>
+            <li>调整不透明度控制锐化强度</li>
+            <li>可以添加蒙版局部控制锐化区域</li>
+        </ol>
+
+        <h2>五、锐化的最佳实践</h2>
+        <ul>
+            <li>始终在图像处理的最后阶段锐化</li>
+            <li>在100%视图下观察锐化效果</li>
+            <li>不同输出需要不同的锐化：屏幕显示需要轻微锐化，打印需要更多</li>
+            <li>使用图层和蒙版实现非破坏性锐化</li>
+            <li>避免对同一图像多次锐化</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 专业技巧：</strong>在Lab颜色模式下只对L（明度）通道锐化，可以避免色彩噪点。转换到Lab模式，选择L通道，应用锐化，再转回RGB。
+        </div>
+
+        <h2>六、针对不同部分的锐化策略</h2>
+        <p><strong>人像锐化</strong>：重点锐化眼睛、眉毛、睫毛、嘴唇等细节，避免锐化皮肤。使用蒙版控制锐化区域。</p>
+        <p><strong>风光锐化</strong>：前景和重要元素需要较强锐化，天空等平滑区域轻微锐化或不锐化。</p>
+        <p><strong>产品锐化</strong>：整体均匀锐化以展现产品细节和质感，但要保持自然。</p>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>对同一张照片使用不同的锐化方法，比较效果</li>
+                <li>尝试过度锐化，观察产生的问题</li>
+                <li>使用高反差保留方法创建非破坏性锐化</li>
+                <li>为人像照片局部锐化眼睛和细节</li>
+            </ol>
+        </div>
+
+        <p>锐化是提升图像质量的重要步骤，但需要克制和精准。宁可少锐化也不要过度，保持图像的自然感是关键！</p>
+    </div>
+</body>
+</html>

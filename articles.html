@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS教程文章 - FreePS在线图像编辑平台</title>
+    <meta name="description" content="FreePS提供全面的Photoshop教程文章，包括基础入门、高级技巧、实战案例等40篇精选内容，帮助您快速掌握图像编辑技能。">
+    <meta name="keywords" content="PS教程,Photoshop教程,图像编辑教程,PS基础,PS技巧,FreePS教程">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .back-link:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .article-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .article-number {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .article-title {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .article-excerpt {
+            color: #666;
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .article-meta {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            color: #999;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 768px) {
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← 返回编辑器</a>
+            <h1>📚 PS教程精选文章</h1>
+            <p class="subtitle">从入门到精通，全面掌握图像编辑技能</p>
+        </header>
+
+        <div class="articles-grid">
+            <a href="articles/article-01.html" class="article-card">
+                <span class="article-number">教程 01</span>
+                <h2 class="article-title">Photoshop完全入门指南：从零开始的图像编辑之旅</h2>
+                <p class="article-excerpt">本文将带你从最基础的界面认识开始，逐步了解Photoshop的核心功能和工作原理，为后续深入学习打下坚实基础...</p>
+                <div class="article-meta">🏷️ 基础入门 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-02.html" class="article-card">
+                <span class="article-number">教程 02</span>
+                <h2 class="article-title">图层系统深度解析：掌握PS最核心的概念</h2>
+                <p class="article-excerpt">图层是Photoshop的灵魂，理解图层的工作原理将让你的编辑效率提升数倍。本文详细讲解图层的各种操作技巧...</p>
+                <div class="article-meta">🏷️ 核心功能 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-03.html" class="article-card">
+                <span class="article-number">教程 03</span>
+                <h2 class="article-title">选区工具完全指南：精准选择是成功的一半</h2>
+                <p class="article-excerpt">从矩形选框到魔棒工具，从快速选择到色彩范围，本文将系统讲解所有选区工具的使用方法和应用场景...</p>
+                <div class="article-meta">🏷️ 工具使用 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-04.html" class="article-card">
+                <span class="article-number">教程 04</span>
+                <h2 class="article-title">画笔工具的艺术：数字绘画技巧大全</h2>
+                <p class="article-excerpt">画笔是PS中最灵活的工具之一，掌握画笔设置和使用技巧，能让你的创作如虎添翼。本文深入探讨各种画笔技法...</p>
+                <div class="article-meta">🏷️ 绘画技巧 | ⏱️ 阅读时长: 8分钟</div>
+            </a>
+
+            <a href="articles/article-05.html" class="article-card">
+                <span class="article-number">教程 05</span>
+                <h2 class="article-title">颜色理论与调色技巧：让你的作品色彩动人</h2>
+                <p class="article-excerpt">颜色是视觉设计的核心要素，本文从色彩理论入手，讲解如何在PS中进行专业的调色操作，提升作品质感...</p>
+                <div class="article-meta">🏷️ 色彩处理 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-06.html" class="article-card">
+                <span class="article-number">教程 06</span>
+                <h2 class="article-title">蒙版技术详解：非破坏性编辑的核心方法</h2>
+                <p class="article-excerpt">蒙版是实现复杂合成效果的关键技术，学会使用蒙版能让你的编辑工作更加灵活和可控，本文全面讲解蒙版应用...</p>
+                <div class="article-meta">🏷️ 高级技巧 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-07.html" class="article-card">
+                <span class="article-number">教程 07</span>
+                <h2 class="article-title">文字工具完全攻略：打造专业级文字效果</h2>
+                <p class="article-excerpt">从基础的文字输入到高级的文字特效，本文详细介绍PS文字工具的各项功能，让你的设计作品更具专业感...</p>
+                <div class="article-meta">🏷️ 文字设计 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-08.html" class="article-card">
+                <span class="article-number">教程 08</span>
+                <h2 class="article-title">滤镜效果大全：一键打造惊艳视觉效果</h2>
+                <p class="article-excerpt">Photoshop内置了数十种强大的滤镜，本文系统介绍常用滤镜的使用方法和创意应用，帮你快速实现各种视觉效果...</p>
+                <div class="article-meta">🏷️ 特效制作 | ⏱️ 阅读时长: 8分钟</div>
+            </a>
+
+            <a href="articles/article-09.html" class="article-card">
+                <span class="article-number">教程 09</span>
+                <h2 class="article-title">照片修复技术：让老照片重获新生</h2>
+                <p class="article-excerpt">学习使用修复画笔、仿制图章等工具，掌握照片修复的核心技术，无论是去除瑕疵还是修复破损照片都能轻松应对...</p>
+                <div class="article-meta">🏷️ 照片修复 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-10.html" class="article-card">
+                <span class="article-number">教程 10</span>
+                <h2 class="article-title">人像精修秘籍：打造自然完美的人像照片</h2>
+                <p class="article-excerpt">从磨皮、祛斑到五官调整，本文分享专业的人像后期处理流程和技巧，让你的人像作品更加精致动人...</p>
+                <div class="article-meta">🏷️ 人像处理 | ⏱️ 阅读时长: 9分钟</div>
+            </a>
+
+            <a href="articles/article-11.html" class="article-card">
+                <span class="article-number">教程 11</span>
+                <h2 class="article-title">抠图技巧全解析：快速分离主体与背景</h2>
+                <p class="article-excerpt">掌握钢笔工具、通道抠图、调整边缘等多种抠图方法，无论是简单背景还是复杂毛发都能完美处理...</p>
+                <div class="article-meta">🏷️ 抠图技术 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-12.html" class="article-card">
+                <span class="article-number">教程 12</span>
+                <h2 class="article-title">图像合成艺术：创造超现实视觉作品</h2>
+                <p class="article-excerpt">学习如何将多张图片完美融合，通过光影匹配、透视调整等技巧创作出令人震撼的合成作品...</p>
+                <div class="article-meta">🏷️ 创意合成 | ⏱️ 阅读时长: 8分钟</div>
+            </a>
+
+            <a href="articles/article-13.html" class="article-card">
+                <span class="article-number">教程 13</span>
+                <h2 class="article-title">智能对象详解：保持图像质量的秘密武器</h2>
+                <p class="article-excerpt">智能对象能让你在反复编辑中保持图像质量，本文深入讲解智能对象的创建、使用和高级应用技巧...</p>
+                <div class="article-meta">🏷️ 高级功能 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-14.html" class="article-card">
+                <span class="article-number">教程 14</span>
+                <h2 class="article-title">调整图层的威力：灵活控制图像效果</h2>
+                <p class="article-excerpt">调整图层提供了非破坏性的调色方式，本文详细介绍各种调整图层的使用方法和实战应用...</p>
+                <div class="article-meta">🏷️ 色彩调整 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-15.html" class="article-card">
+                <span class="article-number">教程 15</span>
+                <h2 class="article-title">图层样式全攻略：快速添加精美效果</h2>
+                <p class="article-excerpt">投影、描边、光泽、渐变叠加等图层样式能快速美化设计元素，本文系统讲解各种样式的使用技巧...</p>
+                <div class="article-meta">🏷️ 样式效果 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-16.html" class="article-card">
+                <span class="article-number">教程 16</span>
+                <h2 class="article-title">Camera Raw详解：释放RAW格式的潜力</h2>
+                <p class="article-excerpt">RAW格式保留了照片的完整信息，通过Camera Raw处理能获得最佳画质。本文讲解ACR的各项调整功能...</p>
+                <div class="article-meta">🏷️ RAW处理 | ⏱️ 阅读时长: 8分钟</div>
+            </a>
+
+            <a href="articles/article-17.html" class="article-card">
+                <span class="article-number">教程 17</span>
+                <h2 class="article-title">通道的奥秘：理解图像的底层结构</h2>
+                <p class="article-excerpt">通道是理解PS工作原理的关键，掌握通道操作能实现许多神奇效果，本文深入浅出讲解通道技术...</p>
+                <div class="article-meta">🏷️ 底层原理 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-18.html" class="article-card">
+                <span class="article-number">教程 18</span>
+                <h2 class="article-title">混合模式完全解读：图层叠加的魔法</h2>
+                <p class="article-excerpt">27种混合模式各有妙用，理解它们的工作原理能让你的合成和调色更加得心应手，本文详细解析每种模式...</p>
+                <div class="article-meta">🏷️ 混合技术 | ⏱️ 阅读时长: 8分钟</div>
+            </a>
+
+            <a href="articles/article-19.html" class="article-card">
+                <span class="article-number">教程 19</span>
+                <h2 class="article-title">路径与矢量工具：创作精确图形</h2>
+                <p class="article-excerpt">钢笔工具和形状图层提供了矢量绘图能力，本文教你如何使用这些工具创建精确、可缩放的图形元素...</p>
+                <div class="article-meta">🏷️ 矢量绘图 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-20.html" class="article-card">
+                <span class="article-number">教程 20</span>
+                <h2 class="article-title">动作与批处理：自动化提升效率</h2>
+                <p class="article-excerpt">通过录制动作和批处理功能，可以将重复性工作自动化，大幅提升工作效率。本文详解自动化流程的建立...</p>
+                <div class="article-meta">🏷️ 效率工具 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-21.html" class="article-card">
+                <span class="article-number">教程 21</span>
+                <h2 class="article-title">3D功能探索：在PS中创作立体效果</h2>
+                <p class="article-excerpt">Photoshop的3D功能虽然不如专业3D软件强大，但对于简单的立体效果制作已经足够，本文介绍3D工具的使用...</p>
+                <div class="article-meta">🏷️ 3D效果 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-22.html" class="article-card">
+                <span class="article-number">教程 22</span>
+                <h2 class="article-title">透视与变形工具：调整图像形态</h2>
+                <p class="article-excerpt">自由变换、透视变形、操控变形等工具能帮你调整图像的形态和角度，本文详解各种变形技术的应用...</p>
+                <div class="article-meta">🏷️ 变形技术 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-23.html" class="article-card">
+                <span class="article-number">教程 23</span>
+                <h2 class="article-title">内容识别填充：AI驱动的智能修复</h2>
+                <p class="article-excerpt">内容识别技术利用AI算法智能分析图像，能快速去除不需要的对象或填充缺失区域，本文讲解其使用技巧...</p>
+                <div class="article-meta">🏷️ AI功能 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-24.html" class="article-card">
+                <span class="article-number">教程 24</span>
+                <h2 class="article-title">黑白照片艺术：单色影像的魅力</h2>
+                <p class="article-excerpt">黑白照片有其独特的艺术魅力，本文讲解如何将彩色照片转换为高质量黑白作品，以及黑白照片的调整技巧...</p>
+                <div class="article-meta">🏷️ 黑白处理 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-25.html" class="article-card">
+                <span class="article-number">教程 25</span>
+                <h2 class="article-title">HDR效果制作：扩展动态范围</h2>
+                <p class="article-excerpt">HDR技术能展现更丰富的明暗细节，本文介绍如何在PS中合成HDR照片以及制作HDR风格效果...</p>
+                <div class="article-meta">🏷️ HDR技术 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-26.html" class="article-card">
+                <span class="article-number">教程 26</span>
+                <h2 class="article-title">全景图拼接：创作宽幅视野作品</h2>
+                <p class="article-excerpt">使用Photomerge功能可以将多张照片无缝拼接成全景图，本文详解全景拼接的拍摄技巧和后期处理方法...</p>
+                <div class="article-meta">🏷️ 全景制作 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-27.html" class="article-card">
+                <span class="article-number">教程 27</span>
+                <h2 class="article-title">锐化技术详解：让图像更清晰锐利</h2>
+                <p class="article-excerpt">合理的锐化能提升图像清晰度，本文介绍USM锐化、智能锐化等多种锐化方法，以及针对不同场景的锐化策略...</p>
+                <div class="article-meta">🏷️ 锐化技术 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-28.html" class="article-card">
+                <span class="article-number">教程 28</span>
+                <h2 class="article-title">降噪处理指南：去除照片中的噪点</h2>
+                <p class="article-excerpt">高ISO拍摄或暗光环境下的照片常有噪点，本文讲解如何使用PS的降噪功能以及第三方插件优化画质...</p>
+                <div class="article-meta">🏷️ 降噪技术 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-29.html" class="article-card">
+                <span class="article-number">教程 29</span>
+                <h2 class="article-title">Web图像优化：平衡质量与文件大小</h2>
+                <p class="article-excerpt">网页图片需要在质量和大小间找到平衡，本文介绍各种图片格式的特点以及导出优化的最佳实践...</p>
+                <div class="article-meta">🏷️ Web优化 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-30.html" class="article-card">
+                <span class="article-number">教程 30</span>
+                <h2 class="article-title">色彩空间与色彩管理：保证颜色准确性</h2>
+                <p class="article-excerpt">理解RGB、CMYK、Lab等色彩空间，掌握色彩管理流程，确保从屏幕到打印的颜色一致性...</p>
+                <div class="article-meta">🏷️ 色彩管理 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-31.html" class="article-card">
+                <span class="article-number">教程 31</span>
+                <h2 class="article-title">印刷设计要点：从屏幕到纸张的完美转换</h2>
+                <p class="article-excerpt">印刷品设计有其特殊要求，本文讲解分辨率、出血、色彩模式等印刷相关的重要概念和注意事项...</p>
+                <div class="article-meta">🏷️ 印刷知识 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-32.html" class="article-card">
+                <span class="article-number">教程 32</span>
+                <h2 class="article-title">液化工具魔法：轻松调整形态</h2>
+                <p class="article-excerpt">液化工具能对图像进行局部推拉变形，在人像修图和创意设计中应用广泛，本文详解液化工具的各项功能...</p>
+                <div class="article-meta">🏷️ 液化技术 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-33.html" class="article-card">
+                <span class="article-number">教程 33</span>
+                <h2 class="article-title">渐变工具的艺术：创造平滑色彩过渡</h2>
+                <p class="article-excerpt">渐变是设计中常用的元素，本文介绍渐变工具的使用方法，渐变编辑器的技巧，以及渐变在设计中的应用...</p>
+                <div class="article-meta">🏷️ 渐变设计 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-34.html" class="article-card">
+                <span class="article-number">教程 34</span>
+                <h2 class="article-title">历史记录与快照：撤销与对比的艺术</h2>
+                <p class="article-excerpt">历史记录面板和快照功能让你能在不同编辑状态间自由切换，本文讲解如何高效利用这些功能...</p>
+                <div class="article-meta">🏷️ 工作流程 | ⏱️ 阅读时长: 4分钟</div>
+            </a>
+
+            <a href="articles/article-35.html" class="article-card">
+                <span class="article-number">教程 35</span>
+                <h2 class="article-title">快捷键大全：成倍提升操作速度</h2>
+                <p class="article-excerpt">熟练使用快捷键是高效使用PS的关键，本文汇总了最常用的快捷键，并提供记忆技巧和自定义方法...</p>
+                <div class="article-meta">🏷️ 快捷键 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-36.html" class="article-card">
+                <span class="article-number">教程 36</span>
+                <h2 class="article-title">工作区定制：打造专属操作界面</h2>
+                <p class="article-excerpt">根据工作需求定制界面布局能提升效率，本文介绍如何设置和保存自己的工作区配置...</p>
+                <div class="article-meta">🏷️ 界面设置 | ⏱️ 阅读时长: 4分钟</div>
+            </a>
+
+            <a href="articles/article-37.html" class="article-card">
+                <span class="article-number">教程 37</span>
+                <h2 class="article-title">性能优化技巧：让PS运行更流畅</h2>
+                <p class="article-excerpt">大文件编辑时PS可能变慢，本文分享内存设置、暂存盘配置、历史记录优化等性能调优技巧...</p>
+                <div class="article-meta">🏷️ 性能优化 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+
+            <a href="articles/article-38.html" class="article-card">
+                <span class="article-number">教程 38</span>
+                <h2 class="article-title">常见问题排查：解决使用中的疑难杂症</h2>
+                <p class="article-excerpt">汇总PS使用中的常见问题和解决方案，包括软件崩溃、文件无法保存、功能异常等情况的处理方法...</p>
+                <div class="article-meta">🏷️ 问题解决 | ⏱️ 阅读时长: 6分钟</div>
+            </a>
+
+            <a href="articles/article-39.html" class="article-card">
+                <span class="article-number">教程 39</span>
+                <h2 class="article-title">插件推荐：扩展PS的无限可能</h2>
+                <p class="article-excerpt">第三方插件能大大扩展PS的功能，本文推荐一些优秀的插件，涵盖修图、调色、特效等各个方面...</p>
+                <div class="article-meta">🏷️ 插件工具 | ⏱️ 阅读时长: 7分钟</div>
+            </a>
+
+            <a href="articles/article-40.html" class="article-card">
+                <span class="article-number">教程 40</span>
+                <h2 class="article-title">学习资源汇总：持续提升你的PS技能</h2>
+                <p class="article-excerpt">学习PS是一个持续的过程，本文整理了优质的学习网站、视频教程、书籍和社区资源，助你不断进步...</p>
+                <div class="article-meta">🏷️ 学习资源 | ⏱️ 阅读时长: 5分钟</div>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

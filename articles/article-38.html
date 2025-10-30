@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见问题排查：解决使用中的疑难杂症 - FreePS教程</title>
+    <meta name="description" content="汇总PS使用中的常见问题和解决方案，包括软件崩溃、文件无法保存、功能异常等情况的处理方法。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>常见问题排查：解决使用中的疑难杂症</h1>
+        <div class="meta">🏷️ 问题解决 | ⏱️ 阅读时长: 6分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、软件崩溃和冻结</h2>
+        <p><strong>问题</strong>：Photoshop突然关闭或无响应。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>增加内存分配（首选项 > 性能）</li>
+            <li>设置足够的暂存盘空间</li>
+            <li>禁用有问题的插件</li>
+            <li>更新显卡驱动程序</li>
+            <li>尝试降低GPU性能设置</li>
+            <li>重置Photoshop首选项（启动时按Ctrl+Alt+Shift）</li>
+        </ul>
+
+        <h2>二、无法保存文件</h2>
+        <p><strong>问题</strong>：保存文件时出错或卡住。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>检查磁盘空间是否充足</li>
+            <li>另存为不同文件名或位置</li>
+            <li>平整图像后再保存</li>
+            <li>关闭文件权限保护</li>
+            <li>暂时禁用杀毒软件</li>
+            <li>使用"文件 > 导出"而非"保存"</li>
+        </ul>
+
+        <h2>三、工具不工作</h2>
+        <p><strong>问题</strong>：画笔、橡皮擦或其他工具没有效果。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>检查图层是否锁定</li>
+            <li>确认选择了正确的图层</li>
+            <li>检查不透明度是否为0%</li>
+            <li>确认有选区时工具只在选区内工作</li>
+            <li>检查图层混合模式</li>
+            <li>重置工具（右键点击工具图标）</li>
+        </ul>
+
+        <h2>四、文字无法编辑</h2>
+        <p><strong>问题</strong>：文字图层无法编辑或显示异常。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>检查文字图层是否已栅格化</li>
+            <li>确认字体文件没有损坏或缺失</li>
+            <li>重新安装问题字体</li>
+            <li>清理字体缓存</li>
+            <li>将文字图层转为形状或栅格化后编辑</li>
+        </ul>
+
+        <h2>五、颜色显示不正确</h2>
+        <p><strong>问题</strong>：颜色在不同设备上显示不一致。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>确认使用正确的色彩模式（RGB或CMYK）</li>
+            <li>检查色彩配置文件设置</li>
+            <li>导出Web图片时转换为sRGB</li>
+            <li>校准显示器</li>
+            <li>使用软打样预览打印效果</li>
+        </ul>
+
+        <h2>六、图像模糊或像素化</h2>
+        <p><strong>问题</strong>：图像看起来模糊或有锯齿。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>检查图像分辨率是否足够</li>
+            <li>避免多次放大缩小</li>
+            <li>使用智能对象保持质量</li>
+            <li>应用适当的锐化</li>
+            <li>确认视图是100%（不是放大查看）</li>
+        </ul>
+
+        <h2>七、性能缓慢</h2>
+        <p><strong>问题</strong>：操作延迟，软件响应慢。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>减少历史记录步数</li>
+            <li>合并不需要的图层</li>
+            <li>清理暂存盘</li>
+            <li>关闭其他占用资源的程序</li>
+            <li>降低文档分辨率</li>
+            <li>禁用不必要的预览</li>
+        </ul>
+
+        <h2>八、图层面板异常</h2>
+        <p><strong>问题</strong>：图层面板消失或显示异常。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>按F7或窗口 > 图层重新打开</li>
+            <li>重置工作区（窗口 > 工作区 > 重置）</li>
+            <li>检查是否按了Tab隐藏了所有面板</li>
+        </ul>
+
+        <h2>九、快捷键不工作</h2>
+        <p><strong>问题</strong>：快捷键突然失效。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>检查是否在文字编辑模式</li>
+            <li>确认没有对话框打开</li>
+            <li>重置键盘快捷键设置</li>
+            <li>检查是否与系统快捷键冲突</li>
+        </ul>
+
+        <h2>十、插件问题</h2>
+        <p><strong>问题</strong>：插件无法加载或导致崩溃。</p>
+        <p><strong>解决方案</strong>：</p>
+        <ul>
+            <li>确认插件与Photoshop版本兼容</li>
+            <li>更新插件到最新版本</li>
+            <li>禁用可疑插件测试</li>
+            <li>重新安装插件</li>
+            <li>检查插件文件夹权限</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>⚠️ 通用排查流程：</strong>
+            <ol>
+                <li><strong>重启软件</strong>：很多小问题重启即可解决</li>
+                <li><strong>重置首选项</strong>：启动时按住Ctrl+Alt+Shift</li>
+                <li><strong>更新软件</strong>：确保使用最新版本</li>
+                <li><strong>检查系统资源</strong>：RAM、磁盘空间、CPU使用率</li>
+                <li><strong>隔离问题</strong>：在新文档中测试是否重现</li>
+                <li><strong>查看日志</strong>：帮助 > 系统信息</li>
+            </ol>
+        </div>
+
+        <h2>十一、预防措施</h2>
+        <ul>
+            <li><strong>定期保存</strong>：启用自动保存（首选项 > 文件处理）</li>
+            <li><strong>备份文件</strong>：使用版本控制或云存储</li>
+            <li><strong>保持更新</strong>：及时更新软件和系统</li>
+            <li><strong>维护硬件</strong>：清理灰尘，监控温度</li>
+            <li><strong>规范操作</strong>：养成良好的工作习惯</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 寻求帮助：</strong>如果以上方法都无法解决问题，可以：
+            <ul>
+                <li>访问Adobe官方论坛寻找解决方案</li>
+                <li>联系Adobe客服</li>
+                <li>在设计社区（如知乎、Reddit）提问</li>
+                <li>查看官方知识库和文档</li>
+            </ul>
+        </div>
+
+        <p>遇到问题不要慌张，系统的排查通常能找到原因。记住，很多看似复杂的问题往往有简单的解决方案。保持耐心，一步步排查，大多数问题都能解决！</p>
+    </div>
+</body>
+</html>

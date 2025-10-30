@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>历史记录与快照：撤销与对比的艺术 - FreePS教程</title>
+    <meta name="description" content="历史记录面板和快照功能让你能在不同编辑状态间自由切换，本文讲解如何高效利用这些功能。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>历史记录与快照：撤销与对比的艺术</h1>
+        <div class="meta">🏷️ 工作流程 | ⏱️ 阅读时长: 4分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、历史记录面板</h2>
+        <p>历史记录面板（窗口 > 历史记录）记录了你在文档上执行的每个操作。点击任何历史状态可以立即返回那个时刻。</p>
+        <p>历史记录默认保存20步，可以在"编辑 > 首选项 > 性能"中增加到最多1000步。但更多历史记录会占用更多内存，通常50-100步已经足够。</p>
+
+        <h2>二、撤销操作</h2>
+        <p>基本撤销快捷键：</p>
+        <ul>
+            <li><strong>撤销</strong>：Ctrl+Z（Mac: Cmd+Z）撤销上一步</li>
+            <li><strong>重做</strong>：Ctrl+Shift+Z（Mac: Cmd+Shift+Z）</li>
+            <li><strong>后退一步</strong>：Ctrl+Alt+Z连续撤销多步</li>
+            <li><strong>前进一步</strong>：Ctrl+Shift+Z连续重做</li>
+        </ul>
+        <p>在历史记录面板中，点击更早的状态会使后续所有操作变灰。如果此时进行新操作，灰色的历史会被删除。</p>
+
+        <h2>三、历史记录画笔</h2>
+        <p>历史记录画笔工具（Y）让你可以选择性地恢复图像的某个历史状态。在历史记录面板左侧点击设置历史记录画笔的源，然后在画布上涂抹就能恢复该状态的内容。</p>
+        <p>这在以下情况特别有用：</p>
+        <ul>
+            <li>对整个图像应用了滤镜，但想在某些区域保持原始效果</li>
+            <li>全局调色后想恢复某个元素的原始颜色</li>
+            <li>过度锐化后局部恢复柔和感</li>
+        </ul>
+
+        <h2>四、快照功能</h2>
+        <p>快照是保存文档某个状态的便捷方式。点击历史记录面板底部的"创建新快照"按钮，或在任何历史状态上右键选择"新建快照"。</p>
+        <p>快照的优势：</p>
+        <ul>
+            <li>不受历史记录步数限制，可以保存关键节点</li>
+            <li>可以随时回到快照状态，即使后续进行了大量操作</li>
+            <li>方便对比不同版本的效果</li>
+        </ul>
+        <p>快照只在当前会话有效，关闭文档后会丢失。重要的阶段应保存为独立文件。</p>
+
+        <h2>五、非线性历史记录</h2>
+        <p>在历史记录选项中勾选"允许非线性历史记录"，点击早期状态后进行操作不会删除后续历史。这创建了分支历史，可以尝试不同方向而不丢失任何工作。</p>
+        <p>但这也让历史记录更复杂，一般用户建议保持默认的线性模式。</p>
+
+        <h2>六、对比不同版本</h2>
+        <p>使用历史记录和快照对比效果：</p>
+        <ul>
+            <li>在关键节点创建快照</li>
+            <li>在不同快照或历史状态间切换查看效果</li>
+            <li>使用历史记录画笔混合不同版本</li>
+        </ul>
+
+        <h2>七、性能优化</h2>
+        <ul>
+            <li>不要设置过多历史记录步数，占用大量内存</li>
+            <li>完成一个阶段后可以清除历史记录释放内存</li>
+            <li>重要节点保存文件或创建快照</li>
+            <li>使用图层和智能对象实现非破坏性编辑，减少对历史记录的依赖</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 最佳实践：</strong>在开始重大调整前创建快照，例如"原始图像"、"基础调色"、"精修完成"等关键节点。这样即使后续操作出错，也能快速回到安全点。</div>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>打开一张照片，在不同调整阶段创建快照</li>
+                <li>尝试使用历史记录画笔局部恢复原始状态</li>
+                <li>在不同快照间切换，对比效果</li>
+            </ol>
+        </div>
+
+        <p>历史记录和快照是Photoshop给你的"后悔药"。善用这些功能，你可以大胆尝试各种创意，因为知道随时可以回到安全的状态。这种自由能激发更多创造力！</p>
+    </div>
+</body>
+</html>

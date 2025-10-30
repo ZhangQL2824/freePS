@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>降噪处理指南：去除照片中的噪点 - FreePS教程</title>
+    <meta name="description" content="高ISO拍摄或暗光环境下的照片常有噪点，本文讲解如何使用PS的降噪功能优化画质。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>降噪处理指南：去除照片中的噪点</h1>
+        <div class="meta">🏷️ 降噪技术 | ⏱️ 阅读时长: 6分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、理解噪点</h2>
+        <p>噪点是照片中随机出现的颗粒和色斑，通常在高ISO拍摄、长时间曝光或暗部区域更明显。噪点分为两类：</p>
+        <ul>
+            <li><strong>明度噪点</strong>：亮度的随机变化，类似胶片颗粒，相对容易接受</li>
+            <li><strong>色彩噪点</strong>：随机的彩色斑点，更影响画质，应优先去除</li>
+        </ul>
+
+        <h2>二、Camera Raw降噪</h2>
+        <p>Camera Raw提供了最好的降噪工具。打开RAW文件或对JPEG使用Camera Raw滤镜，在"细节"面板找到降噪控制：</p>
+        <p><strong>明亮度降噪</strong></p>
+        <ul>
+            <li><strong>明亮度</strong>：控制明度噪点，通常设置20-40</li>
+            <li><strong>明亮度细节</strong>：保留细节，过高会保留噪点</li>
+            <li><strong>明亮度对比度</strong>：保留对比度，避免图像过于柔和</li>
+        </ul>
+        <p><strong>颜色降噪</strong></p>
+        <ul>
+            <li><strong>颜色</strong>：去除色彩噪点，可以设置较高（50-75）</li>
+            <li><strong>颜色细节</strong>：保留色彩细节</li>
+            <li><strong>颜色平滑度</strong>：平滑色彩过渡</li>
+        </ul>
+
+        <h2>三、减少杂色滤镜</h2>
+        <p>Photoshop内置的"滤镜 > 杂色 > 减少杂色"提供了简单的降噪选项：</p>
+        <ul>
+            <li><strong>强度</strong>：总体降噪强度</li>
+            <li><strong>保留细节</strong>：平衡降噪和细节保留</li>
+            <li><strong>减少杂色颜色</strong>：专门针对色彩噪点</li>
+            <li><strong>锐化细节</strong>：降噪后补偿细节损失</li>
+        </ul>
+        <p>勾选"高级"选项可以分别对每个颜色通道降噪，蓝色通道通常噪点最多，可以设置更高的强度。</p>
+
+        <h2>四、频率分离降噪法</h2>
+        <p>这是专业的降噪技术，将图像分为低频（色彩和色调）和高频（细节和纹理）两层：</p>
+        <ol>
+            <li>复制两个图层，命名为"低频"和"高频"</li>
+            <li>低频层：应用高斯模糊，半径根据噪点大小（通常5-15像素）</li>
+            <li>高频层：图像 > 应用图像，图层选低频层，混合模式减去，缩放2，补偿值128</li>
+            <li>高频层混合模式改为"线性光"</li>
+            <li>在低频层上用修复工具去除色彩噪点</li>
+            <li>在高频层上控制明度噪点</li>
+        </ol>
+
+        <h2>五、智能降噪策略</h2>
+        <p><strong>分区降噪</strong>：不同区域需要不同程度的降噪。天空等平滑区域可以强力降噪，主体细节区域要保守降噪。使用蒙版控制降噪区域。</p>
+        <p><strong>平衡细节与平滑</strong>：降噪必然损失细节。关键是找到平衡点，保留重要细节，去除干扰性噪点。</p>
+        <p><strong>先降噪后锐化</strong>：应该在降噪后再锐化，否则锐化会强化噪点。</p>
+
+        <h2>六、预防噪点的拍摄技巧</h2>
+        <ul>
+            <li>尽量使用低ISO，现代相机在ISO 400以下通常噪点很少</li>
+            <li>充足曝光，提亮阴影会放大噪点</li>
+            <li>使用机内降噪功能（长曝光降噪、高ISO降噪）</li>
+            <li>RAW格式包含更多信息，降噪空间更大</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 专业建议：</strong>轻微的明度噪点可以保留甚至是有益的，它类似胶片颗粒，能增加质感。应该重点去除影响观感的色彩噪点。
+        </div>
+
+        <h2>七、第三方降噪插件</h2>
+        <p>专业的降噪插件往往比Photoshop内置工具更强大：</p>
+        <ul>
+            <li><strong>Topaz Denoise AI</strong>：使用人工智能的降噪插件，效果出色</li>
+            <li><strong>DxO Pure RAW</strong>：专门针对RAW文件的降噪和优化</li>
+            <li><strong>Nik Collection Dfine</strong>：专业的降噪工具，可选择性降噪</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>找一张高ISO拍摄的照片，对比不同降噪方法的效果</li>
+                <li>使用Camera Raw分别调整明度和颜色降噪参数</li>
+                <li>尝试频率分离降噪法</li>
+                <li>使用蒙版对照片不同区域应用不同强度的降噪</li>
+            </ol>
+        </div>
+
+        <p>降噪是一门平衡的艺术，目标不是完全消除噪点，而是在保留细节的前提下让画质看起来更干净。适度的降噪能大幅提升照片质量，但过度降噪会让照片失去细节和质感，变得像塑料一样！</p>
+    </div>
+</body>
+</html>

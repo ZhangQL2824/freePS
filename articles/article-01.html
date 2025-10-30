@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photoshop完全入门指南：从零开始的图像编辑之旅 - FreePS教程</title>
+    <meta name="description" content="本文将带你从最基础的界面认识开始，逐步了解Photoshop的核心功能和工作原理，为后续深入学习打下坚实基础。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.2em;
+            color: #222;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .meta {
+            color: #999;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #667eea;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>Photoshop完全入门指南：从零开始的图像编辑之旅</h1>
+        <div class="meta">🏷️ 基础入门 | ⏱️ 阅读时长: 5分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、Photoshop是什么？</h2>
+        <p>Photoshop是Adobe公司开发的专业图像处理软件，自1990年诞生以来，已经成为数字图像编辑领域的行业标准。无论是专业摄影师、平面设计师，还是普通用户，都能从Photoshop强大的功能中受益。它不仅可以处理照片，还能进行数字绘画、网页设计、UI设计等多种创作。</p>
+        <p>随着Web技术的发展，像FreePS这样的在线图像编辑器让更多人能够便捷地使用类似Photoshop的功能，无需安装软件即可完成大部分常见的图像处理任务。</p>
+
+        <h2>二、认识Photoshop的界面</h2>
+        <p>当你第一次打开Photoshop时，可能会被密密麻麻的工具和面板吓到。但实际上，Photoshop的界面设计是非常合理的，主要由以下几个部分组成：</p>
+
+        <ul>
+            <li><strong>菜单栏</strong>：位于顶部，包含所有功能命令，如文件、编辑、图像、图层等。这是访问所有高级功能的入口。</li>
+            <li><strong>工具栏</strong>：通常位于左侧，包含选择工具、绘画工具、修饰工具等常用工具。每个工具都有相应的快捷键，熟练使用可以大大提升效率。</li>
+            <li><strong>选项栏</strong>：位于菜单栏下方，显示当前选中工具的具体设置选项。不同的工具会显示不同的选项。</li>
+            <li><strong>画布区域</strong>：中央的主要工作区域，你所有的编辑操作都在这里进行。</li>
+            <li><strong>面板区域</strong>：通常位于右侧，包含图层面板、历史记录面板、颜色面板等。这些面板提供了强大的辅助功能。</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 新手小贴士：</strong>界面看起来复杂是因为Photoshop功能强大。建议先专注于学习几个基础工具，随着使用逐渐熟悉其他功能。按Tab键可以隐藏所有面板，让你专注于画布。
+        </div>
+
+        <h2>三、创建你的第一个文档</h2>
+        <p>学习Photoshop的第一步是创建一个新文档。点击"文件"菜单，选择"新建"，会弹出新建文档对话框。在这里，你需要设置几个重要参数：</p>
+
+        <ol>
+            <li><strong>文档名称</strong>：给你的项目起个有意义的名字，方便后续管理。</li>
+            <li><strong>宽度和高度</strong>：根据你的需求设置画布尺寸。如果是网页设计，常用1920x1080；如果是手机界面，可以选择750x1334等。</li>
+            <li><strong>分辨率</strong>：屏幕显示用72或96 ppi即可，打印作品需要300 ppi。分辨率越高，文件越大。</li>
+            <li><strong>色彩模式</strong>：RGB用于屏幕显示，CMYK用于印刷。大多数情况下选择RGB即可。</li>
+            <li><strong>背景内容</strong>：可以选择白色、背景色或透明。透明背景常用于需要导出PNG格式的设计。</li>
+        </ol>
+
+        <p>设置好这些参数后，点击"创建"，你的第一个Photoshop文档就诞生了！</p>
+
+        <h2>四、了解图层概念</h2>
+        <p>图层是Photoshop最核心的概念之一。可以把图层想象成一张张透明的玻璃纸叠加在一起，每张纸上可以画不同的内容，最终看到的是所有图层叠加的效果。</p>
+
+        <p>图层的优势在于：</p>
+        <ul>
+            <li>每个图层可以独立编辑，不会影响其他图层</li>
+            <li>可以随时调整图层的顺序、透明度和混合模式</li>
+            <li>可以随时隐藏或显示某个图层</li>
+            <li>便于组织和管理复杂的设计项目</li>
+        </ul>
+
+        <p>打开图层面板（窗口 > 图层，或按F7），你会看到当前文档的所有图层。新建文档通常只有一个背景图层。点击面板底部的"创建新图层"按钮可以添加新图层。</p>
+
+        <h2>五、基础工具快速入门</h2>
+        <p>让我们从几个最常用的工具开始：</p>
+
+        <p><strong>移动工具（V）</strong>：用于移动图层中的内容。选中移动工具后，点击画布上的对象即可拖动。按住Shift可以保持水平或垂直移动。</p>
+
+        <p><strong>选框工具（M）</strong>：用于创建矩形或椭圆形选区。选区是指定编辑范围的方式，只有选区内的内容会被影响。长按此工具图标可以切换不同形状的选框。</p>
+
+        <p><strong>画笔工具（B）</strong>：用于绘画。可以在选项栏中调整画笔的大小、硬度和不透明度。按住Shift点击两个点可以画直线。</p>
+
+        <p><strong>橡皮擦工具（E）</strong>：用于擦除图层内容。注意背景图层默认是锁定的，需要转换为普通图层才能使用橡皮擦。</p>
+
+        <p><strong>文字工具（T）</strong>：用于添加文本。点击画布任意位置即可开始输入。在选项栏可以设置字体、大小、颜色等属性。</p>
+
+        <h2>六、保存你的作品</h2>
+        <p>完成编辑后，别忘了保存文件。Photoshop提供多种保存选项：</p>
+
+        <ul>
+            <li><strong>PSD格式</strong>：保留所有图层、通道等信息，是Photoshop的原生格式。如果还需要继续编辑，必须保存为PSD。</li>
+            <li><strong>JPEG格式</strong>：常用的照片格式，文件小但有压缩损失，不保留图层信息。适合分享照片。</li>
+            <li><strong>PNG格式</strong>：支持透明背景，无损压缩，适合网页图标和需要透明背景的图像。</li>
+        </ul>
+
+        <p>选择"文件 > 存储为"可以将文件保存为PSD。选择"文件 > 导出 > 导出为"可以导出为JPEG、PNG等格式，并可以调整质量和大小。</p>
+
+        <h2>七、开始你的学习之旅</h2>
+        <p>入门Photoshop并不难，关键是多练习。建议从简单的任务开始，比如裁剪照片、调整亮度对比度、添加文字等。随着你对基础工具的熟悉，逐步尝试更高级的功能，如图层蒙版、调整图层、滤镜效果等。</p>
+
+        <p>记住，每个Photoshop大师都是从新手开始的。保持耐心，享受学习的过程，很快你就能创作出令自己满意的作品。如果你不想安装软件，也可以使用FreePS这样的在线工具开始你的图像编辑之旅。</p>
+
+        <div class="highlight">
+            <strong>🎯 练习建议：</strong>
+            <ol>
+                <li>创建一个新文档，使用不同的工具在画布上绘制简单图形</li>
+                <li>打开一张自己的照片，尝试裁剪、调整亮度和添加文字</li>
+                <li>创建多个图层，理解图层之间的关系</li>
+                <li>尝试保存为不同的文件格式，观察文件大小和质量的差异</li>
+            </ol>
+        </div>
+
+        <p>祝你在Photoshop的学习之旅中收获满满！下一篇文章我们将深入讲解图层系统，敬请期待。</p>
+    </div>
+</body>
+</html>

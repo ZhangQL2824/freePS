@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>照片修复技术：让老照片重获新生 - FreePS教程</title>
+    <meta name="description" content="学习使用修复画笔、仿制图章等工具，掌握照片修复的核心技术，无论是去除瑕疵还是修复破损照片都能轻松应对。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.2em;
+            color: #222;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .meta {
+            color: #999;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #667eea;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>照片修复技术：让老照片重获新生</h1>
+        <div class="meta">🏷️ 照片修复 | ⏱️ 阅读时长: 6分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、照片修复概述</h2>
+        <p>照片修复是Photoshop最实用的功能之一。无论是去除现代照片中的小瑕疵，还是修复老照片的破损和褪色，Photoshop都提供了强大的工具。照片修复不仅能让珍贵的回忆重现光彩，也是商业摄影后期处理的重要环节。</p>
+
+        <p>照片修复的基本原则是<strong>非破坏性编辑</strong>。始终在新图层上进行修复操作，保留原始图层。这样即使出错也可以随时回退，而且可以通过调整修复图层的不透明度来控制修复强度。</p>
+
+        <h2>二、修复工具详解</h2>
+        <p>Photoshop提供了多种修复工具，每种工具都有其最适合的应用场景：</p>
+
+        <p><strong>污点修复画笔工具（J）</strong>：最简单快速的修复工具。只需在瑕疵上点击或涂抹，工具会自动分析周围区域并进行修复。有三种模式：</p>
+        <ul>
+            <li><strong>近似匹配</strong>：使用选区边缘的像素修复</li>
+            <li><strong>创建纹理</strong>：使用选区内的像素创建纹理</li>
+            <li><strong>内容识别</strong>：使用AI算法智能填充（最推荐）</li>
+        </ul>
+
+        <p><strong>修复画笔工具（J）</strong>：比污点修复画笔更可控。需要按住Alt点击选择源点，然后在目标区域涂抹。工具会复制源点的纹理，但会匹配目标区域的光照和色调，因此修复效果更自然。</p>
+
+        <p><strong>修补工具（J）</strong>：通过拖动选区进行修复。可以选择"正常"模式（拖动选区到干净区域）或"目标"模式（拖动干净区域到瑕疵处）。有内容识别选项，修复效果更智能。</p>
+
+        <p><strong>内容识别移动工具</strong>：可以移动或扩展对象。"移动"模式将对象移到新位置并自动填充原位置，"扩展"模式复制对象。基于AI技术，效果通常很好。</p>
+
+        <p><strong>仿制图章工具（S）</strong>：经典的修复工具。按住Alt点击选择源点，然后在目标区域涂抹。它会完全复制源点的内容，适合需要精确匹配的情况。调整不透明度可以创建半透明的仿制效果。</p>
+
+        <p><strong>图案图章工具（S）</strong>：使用预设图案进行涂抹，较少用于照片修复。</p>
+
+        <div class="highlight">
+            <strong>💡 工具选择建议：</strong>小瑕疵（痘痘、灰尘）用污点修复画笔；需要精确控制用修复画笔；大面积修复用修补工具；需要完全匹配用仿制图章。优先尝试智能工具，不行再用手动工具。
+        </div>
+
+        <h2>三、去除照片瑕疵</h2>
+        <p>现代数码照片最常见的问题是各种小瑕疵：灰尘、传感器污点、皮肤瑕疵等。</p>
+
+        <p><strong>去除灰尘和污点</strong>：</p>
+        <ol>
+            <li>放大图像到100%或更高，仔细检查</li>
+            <li>创建新图层，命名为"修复"</li>
+            <li>选择污点修复画笔，确保选中"对所有图层取样"</li>
+            <li>调整画笔大小略大于瑕疵，在瑕疵上点击</li>
+            <li>系统地扫描整个图像，不要遗漏任何区域</li>
+        </ol>
+
+        <p><strong>去除皮肤瑕疵</strong>：</p>
+        <ol>
+            <li>同样创建新的修复图层</li>
+            <li>使用污点修复画笔（内容识别模式）点击痘痘、斑点</li>
+            <li>对于较大的瑕疵，使用修复画笔工具，选择附近健康皮肤作为源点</li>
+            <li>保留一些自然的皮肤纹理，不要过度修复导致皮肤失真</li>
+        </ol>
+
+        <p><strong>去除不需要的对象</strong>：</p>
+        <ol>
+            <li>对于小对象，直接使用污点修复画笔涂抹</li>
+            <li>对于较大对象，使用套索工具圈选对象，然后"编辑 > 填充 > 内容识别"</li>
+            <li>或使用修补工具，圈选对象后拖动到相似的背景区域</li>
+            <li>边缘不自然的地方用仿制图章工具手动修复</li>
+        </ol>
+
+        <h2>四、修复老照片</h2>
+        <p>老照片通常面临多种问题：褪色、划痕、撕裂、折痕、霉斑等。修复老照片需要耐心和系统的方法。</p>
+
+        <p><strong>第一步：扫描和基本调整</strong></p>
+        <ul>
+            <li>以至少300 DPI扫描原照片</li>
+            <li>使用"图像 > 自动色调/自动对比度/自动颜色"进行初步调整</li>
+            <li>或手动使用色阶和曲线调整明暗和对比度</li>
+        </ul>
+
+        <p><strong>第二步：修复物理损伤</strong></p>
+        <ul>
+            <li>放大图像，系统地修复划痕和折痕</li>
+            <li>对于长而直的划痕，使用修复画笔沿划痕方向涂抹</li>
+            <li>对于撕裂部分，如果内容丢失，需要用仿制图章从其他区域复制类似内容</li>
+            <li>霉斑和污渍用污点修复画笔或修复画笔去除</li>
+        </ul>
+
+        <p><strong>第三步：修复褪色和变色</strong></p>
+        <ul>
+            <li>褪色的黑白照片：使用色阶调整，拉伸直方图恢复对比度</li>
+            <li>泛黄的照片：使用"图像 > 调整 > 色相/饱和度"，选择黄色通道降低饱和度</li>
+            <li>或使用黑白调整图层，重新定义黑白转换</li>
+        </ul>
+
+        <p><strong>第四步：锐化和降噪</strong></p>
+        <ul>
+            <li>老照片通常较模糊，适当锐化可以提升清晰度</li>
+            <li>使用"滤镜 > 锐化 > 智能锐化"，注意不要过度</li>
+            <li>如果有噪点或颗粒，使用"滤镜 > 杂色 > 减少杂色"</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 老照片修复技巧：</strong>修复老照片时，不必追求完美无瑕。保留一些岁月痕迹反而更有历史感和真实感。重点是修复明显的破损，让照片清晰可见即可。
+        </div>
+
+        <h2>五、修复照片的常见问题</h2>
+        <p><strong>红眼修复</strong>：闪光灯拍摄常造成红眼。选择红眼工具（J工具组），点击红色瞳孔即可自动修复。也可以手动用色相/饱和度工具选择红色通道降低饱和度。</p>
+
+        <p><strong>镜头畸变校正</strong>：广角镜头会产生桶形畸变，长焦镜头会产生枕形畸变。使用"滤镜 > 镜头校正"，可以自动检测镜头型号并校正，或手动调整。</p>
+
+        <p><strong>色差修复</strong>：边缘出现彩色条纹。在镜头校正滤镜中的"色差"选项进行调整。</p>
+
+        <p><strong>暗角修复</strong>：照片四角较暗。在镜头校正滤镜中调整"晕影"选项，或使用曲线工具配合蒙版手动提亮。</p>
+
+        <p><strong>噪点处理</strong>：高ISO拍摄的照片有明显噪点。使用"滤镜 > 减少杂色"，调整强度、保留细节等参数。也可以使用Camera Raw滤镜的细节面板进行更精细的降噪。</p>
+
+        <h2>六、内容识别填充的高级应用</h2>
+        <p>内容识别填充是基于AI的强大修复功能。在Photoshop 2019及更新版本中，内容识别填充有专门的工作区，提供更精确的控制。</p>
+
+        <p><strong>使用方法：</strong></p>
+        <ol>
+            <li>使用任意选区工具选中要移除的对象</li>
+            <li>选择"编辑 > 内容识别填充"</li>
+            <li>在右侧调整采样区域（绿色覆盖部分），取消不想采样的区域</li>
+            <li>调整填充设置：颜色适应、旋转适应、缩放、镜像</li>
+            <li>预览效果，满意后点击确定</li>
+        </ol>
+
+        <p>技巧：如果第一次结果不理想，可以调整采样区域或在输出设置中选择"新建图层"，这样可以多次尝试直到满意。</p>
+
+        <h2>七、修复照片的最佳工作流程</h2>
+        <ol>
+            <li><strong>复制背景图层</strong>：永远不要在原始图层上工作</li>
+            <li><strong>整体评估</strong>：放大查看整张照片，列出需要修复的问题</li>
+            <li><strong>从简单到复杂</strong>：先处理简单的瑕疵，再处理复杂的破损</li>
+            <li><strong>分层修复</strong>：不同类型的修复用不同图层，便于调整</li>
+            <li><strong>定期保存</strong>：修复工作可能耗时较长，定期保存避免意外丢失</li>
+            <li><strong>休息后复查</strong>：完成后休息一下，回来用新鲜的眼光检查是否有遗漏</li>
+        </ol>
+
+        <div class="highlight">
+            <strong>🎯 练习建议：</strong>
+            <ol>
+                <li>拍一张有灰尘的照片或找一张老照片，练习去除瑕疵</li>
+                <li>尝试每种修复工具，理解它们的区别和最佳应用场景</li>
+                <li>练习使用内容识别填充去除照片中的不需要对象</li>
+                <li>找一张严重破损的老照片，完整走一遍修复流程</li>
+                <li>对比修复前后的照片，总结经验改进技巧</li>
+            </ol>
+        </div>
+
+        <p>照片修复是一门需要技术和艺术感的工作。技术可以通过练习掌握，艺术感则需要培养对细节的敏感度和对完美效果的追求。随着经验的积累，你会越来越擅长判断何时使用哪种工具，如何最自然地修复问题。掌握这项技能，你将能够挽救珍贵的回忆，也能为商业摄影提供专业的后期服务。</p>
+    </div>
+</body>
+</html>

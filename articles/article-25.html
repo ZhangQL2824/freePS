@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDR效果制作：扩展动态范围 - FreePS教程</title>
+    <meta name="description" content="HDR技术能展现更丰富的明暗细节，本文介绍如何在PS中合成HDR照片以及制作HDR风格效果。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.2em;
+            color: #222;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .meta {
+            color: #999;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #667eea;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>HDR效果制作：扩展动态范围</h1>
+        <div class="meta">🏷️ HDR技术 | ⏱️ 阅读时长: 7分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、什么是HDR</h2>
+        <p>HDR（High Dynamic Range，高动态范围）是一种能够呈现比标准照片更宽广亮度范围的摄影技术。人眼可以同时看清极亮和极暗的区域，但相机传感器的动态范围有限，在高对比场景下，要么高光过曝，要么阴影欠曝。</p>
+
+        <p>HDR技术通过合成多张不同曝光的照片，保留高光和阴影的细节，创造出更接近人眼所见的图像。真实的HDR图像包含了远超普通显示器能显示的亮度信息，需要通过"色调映射"转换为可显示的图像。</p>
+
+        <p>HDR的主要优势：</p>
+        <ul>
+            <li>保留高光和阴影的丰富细节</li>
+            <li>展现更真实的场景亮度关系</li>
+            <li>在高对比场景（如日落、室内窗外景色）中表现出色</li>
+            <li>为后期调整提供更大的空间</li>
+        </ul>
+
+        <h2>二、拍摄HDR照片的准备</h2>
+        <p>要创建高质量的HDR图像，拍摄阶段就需要做好准备。</p>
+
+        <p><strong>使用三脚架</strong><br>
+        HDR需要合成多张照片，任何相机移动都会导致对齐问题。使用稳固的三脚架是必须的，特别是在光线较暗的环境中。</p>
+
+        <p><strong>包围曝光拍摄</strong><br>
+        现代相机通常都有自动包围曝光（AEB）功能。设置拍摄3-7张不同曝光的照片，曝光差距通常设置为±2EV。基本设置：</p>
+        <ul>
+            <li>标准曝光：正常曝光的照片</li>
+            <li>欠曝照片：保留高光细节，通常-2EV</li>
+            <li>过曝照片：保留阴影细节，通常+2EV</li>
+        </ul>
+
+        <p><strong>拍摄技巧</strong></p>
+        <ul>
+            <li>使用快门优先或手动模式，只改变快门速度</li>
+            <li>保持光圈和ISO不变，避免景深和噪点变化</li>
+            <li>使用RAW格式拍摄，保留最多信息</li>
+            <li>避免场景中有快速移动的物体</li>
+            <li>关闭自动白平衡，使用固定白平衡</li>
+        </ul>
+
+        <h2>三、在Photoshop中合并HDR</h2>
+        <p><strong>步骤一：导入照片</strong><br>
+        选择"文件 > 自动 > 合并到HDR Pro"。在弹出的对话框中，点击"浏览"添加不同曝光的照片。也可以直接拖入文件夹。</p>
+
+        <p><strong>步骤二：对齐和合成</strong><br>
+        勾选"尝试自动对齐源图像"选项，如果拍摄时有轻微的机位移动，Photoshop会自动对齐。点击"确定"，Photoshop会分析并合成HDR图像。</p>
+
+        <p><strong>步骤三：色调映射</strong><br>
+        合成后会打开HDR Pro对话框，这是最关键的步骤。主要参数：</p>
+
+        <ul>
+            <li><strong>模式</strong>：选择16位或32位。32位保留所有HDR信息但文件巨大，16位是更实用的选择</li>
+            <li><strong>方法</strong>：选择"局部自适应"获得最佳控制</li>
+            <li><strong>边缘光晕</strong>：控制细节区域的光晕，过高会产生不自然的光环</li>
+            <li><strong>强度</strong>：控制HDR效果的强度，过高会显得不真实</li>
+            <li><strong>色调和细节</strong>：调整整体色调曲线和细节锐度</li>
+            <li><strong>颜色</strong>：调整饱和度和自然饱和度</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 自然HDR的关键：</strong>很多HDR照片看起来过度处理，像卡通或油画。要创建自然的HDR，应该保守地调整参数，目标是增强细节而不是创造超现实效果。强度控制在60-80%通常效果最好。
+        </div>
+
+        <h2>四、单张照片的HDR效果</h2>
+        <p>如果你没有包围曝光的多张照片，也可以对单张照片（特别是RAW格式）应用HDR风格效果。</p>
+
+        <p><strong>使用Camera Raw</strong><br>
+        打开RAW文件或对现有图层右键选择"转换为智能对象"后应用Camera Raw滤镜：</p>
+        <ol>
+            <li>降低高光至-50到-100，恢复天空等亮部细节</li>
+            <li>提升阴影至+50到+100，显现暗部细节</li>
+            <li>增加清晰度至+20到+40，增强中频细节</li>
+            <li>适当降低白色，提升黑色，压缩动态范围</li>
+            <li>调整自然饱和度和饱和度，HDR通常需要浓郁的色彩</li>
+        </ol>
+
+        <p><strong>阴影/高光命令</strong><br>
+        这是创建HDR风格的快速方法："图像 > 调整 > 阴影/高光"。调整阴影数量和高光数量，都设置在30-50%之间通常效果不错。注意调整"色调宽度"和"半径"以获得自然过渡。</p>
+
+        <h2>五、HDR风格的手动制作</h2>
+        <p>通过图层混合技术，可以手动创建HDR风格效果，这种方法提供了最大的控制自由度。</p>
+
+        <p><strong>基础步骤：</strong></p>
+        <ol>
+            <li>复制背景图层两次，得到三个图层</li>
+            <li>顶层图层：应用高斯模糊（半径15-30像素），混合模式改为"叠加"，不透明度50%</li>
+            <li>中层图层：使用"阴影/高光"命令强化细节</li>
+            <li>底层：保持原始图像</li>
+            <li>根据需要调整各层不透明度</li>
+        </ol>
+
+        <p>这种方法本质上是在局部增强对比度，创造出类似HDR的"超现实"感觉。</p>
+
+        <h2>六、高级技巧：手工合成包围曝光</h2>
+        <p>如果你想要完全手动控制HDR合成过程，可以使用图层蒙版方法：</p>
+
+        <ol>
+            <li>打开所有曝光照片，叠加在同一文档中</li>
+            <li>确保照片对齐（编辑 > 自动对齐图层）</li>
+            <li>将标准曝光照片作为基础层</li>
+            <li>添加欠曝照片图层，使用图层蒙版只保留高光区域</li>
+            <li>添加过曝照片图层，使用图层蒙版只保留阴影区域</li>
+            <li>使用黑白渐变画笔在蒙版上精细控制每个区域的混合</li>
+        </ol>
+
+        <p>这种方法工作量大但控制精确，能避免HDR自动合成产生的伪影和光晕。</p>
+
+        <h2>七、避免常见的HDR错误</h2>
+        <p><strong>过度处理</strong><br>
+        最常见的错误是HDR效果太强，导致图像看起来不真实。记住HDR是工具而非目的，应该用来增强而非扭曲现实。</p>
+
+        <p><strong>光晕和鬼影</strong><br>
+        在高对比边缘（如树木剪影对天空）容易出现光晕。降低"边缘光晕"参数，或使用手动蒙版方法可以改善。场景中的移动物体（如摇曳的树枝、行人）会产生鬼影，拍摄时尽量避免。</p>
+
+        <p><strong>不自然的颜色</strong><br>
+        HDR容易产生过饱和或偏色。适当降低饱和度，必要时使用"色相/饱和度"或"可选颜色"调整特定颜色。</p>
+
+        <p><strong>噪点问题</strong><br>
+        提升阴影会放大噪点。在HDR处理后使用适当的降噪，或在合成前对过曝照片进行降噪处理。</p>
+
+        <h2>八、HDR的实际应用场景</h2>
+        <p><strong>室内摄影</strong><br>
+        室内外亮度差异大时，HDR能同时展现窗外景色和室内细节，这在房地产摄影中特别有用。</p>
+
+        <p><strong>风光摄影</strong><br>
+        日出日落时天空和地面的亮度差异巨大，HDR能保留天空的色彩和地面的细节。但要控制好度，避免过度戏剧化。</p>
+
+        <p><strong>建筑摄影</strong><br>
+        建筑内部和外部的光线差异，以及建筑阴影和高光区域，都能从HDR中受益。增强的细节也能更好展现建筑材质。</p>
+
+        <p><strong>不适合的场景</strong></p>
+        <ul>
+            <li>人像摄影：HDR会过度强调皮肤纹理和瑕疵</li>
+            <li>运动摄影：移动物体会产生鬼影</li>
+            <li>低对比场景：没有必要使用HDR</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>拍摄一组包围曝光照片（至少3张），在Photoshop中合成HDR</li>
+                <li>调整HDR Pro中的不同参数，观察对最终效果的影响</li>
+                <li>尝试对单张照片应用HDR风格处理</li>
+                <li>比较自动合成和手动蒙版方法的结果</li>
+            </ol>
+        </div>
+
+        <p>HDR是强大的技术，但也容易被滥用。关键是理解它的原理和限制，根据场景需求合理使用。自然、细节丰富的HDR照片比超现实的风格化效果更有持久的吸引力。掌握好度，HDR会成为你摄影后期的有力工具！</p>
+    </div>
+</body>
+</html>

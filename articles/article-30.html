@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>色彩空间与色彩管理：保证颜色准确性 - FreePS教程</title>
+    <meta name="description" content="理解RGB、CMYK、Lab等色彩空间，掌握色彩管理流程，确保从屏幕到打印的颜色一致性。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>色彩空间与色彩管理：保证颜色准确性</h1>
+        <div class="meta">🏷️ 色彩管理 | ⏱️ 阅读时长: 7分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、什么是色彩空间</h2>
+        <p>色彩空间是定义和组织颜色的系统，不同的色彩空间能表示的颜色范围（色域）不同。理解色彩空间对于确保颜色在不同设备和输出方式上的一致性至关重要。</p>
+
+        <h2>二、常见色彩空间</h2>
+        <p><strong>RGB（红绿蓝）</strong><br>
+        加色模式，用于屏幕显示。通过混合不同强度的红、绿、蓝光创造颜色。</p>
+        <ul>
+            <li><strong>sRGB</strong>：标准RGB，Web和多数设备的默认色彩空间，色域较小但兼容性最好</li>
+            <li><strong>Adobe RGB</strong>：色域比sRGB大约35%，适合专业摄影和印刷前期</li>
+            <li><strong>ProPhoto RGB</strong>：超宽色域，包含几乎所有可见颜色，用于高端摄影工作流程</li>
+        </ul>
+
+        <p><strong>CMYK（青品黄黑）</strong><br>
+        减色模式，用于印刷。通过混合青、品红、黄、黑油墨创造颜色。RGB转CMYK时色域会收缩，某些鲜艳颜色无法准确再现。</p>
+
+        <p><strong>Lab颜色</strong><br>
+        设备无关的色彩空间，包含所有可见颜色。L表示明度，a表示绿-红轴，b表示蓝-黄轴。常用于精确的颜色调整和色彩空间转换的中间步骤。</p>
+
+        <h2>三、色彩配置文件（ICC Profile）</h2>
+        <p>ICC配置文件描述了设备如何再现颜色。每个显示器、打印机、相机都有自己的特性，配置文件确保颜色在不同设备间准确传递。</p>
+        <p>在Photoshop中，"编辑 > 颜色设置"可以配置工作色彩空间和色彩管理策略：</p>
+        <ul>
+            <li><strong>工作空间</strong>：设置默认的RGB和CMYK色彩空间</li>
+            <li><strong>色彩管理策略</strong>：决定打开文件时如何处理嵌入的配置文件</li>
+            <li><strong>转换选项</strong>：设置色彩空间转换的引擎和方法</li>
+        </ul>
+
+        <h2>四、显示器校准</h2>
+        <p>即使有完美的色彩管理，如果显示器显示不准确也是徒劳。专业工作需要定期校准显示器：</p>
+        <ul>
+            <li>使用硬件校色仪（如X-Rite ColorMunki、Datacolor SpyderX）</li>
+            <li>校准目标：色温6500K（D65）、亮度120cd/m²、Gamma 2.2</li>
+            <li>建议每月校准一次</li>
+            <li>工作环境光线应稳定且中性</li>
+        </ul>
+
+        <h2>五、RGB到CMYK的转换</h2>
+        <p>为印刷准备文件时需要转换到CMYK。在"编辑 > 转换为配置文件"中：</p>
+        <ol>
+            <li>选择目标CMYK配置文件（与印刷厂确认）</li>
+            <li>引擎选择Adobe (ACE)</li>
+            <li>渲染意图通常选择"相对比色"或"可感知"</li>
+            <li>勾选"使用黑场补偿"</li>
+        </ol>
+        <p>转换后检查色彩变化，特别是鲜艳的蓝色、绿色和橙色，这些颜色在CMYK中色域外，会被映射到最接近的可打印颜色。</p>
+
+        <h2>六、软打样</h2>
+        <p>软打样让你在屏幕上预览打印效果。"视图 > 校样设置 > 自定"，选择打印设备的配置文件。启用"视图 > 校样颜色"（Ctrl+Y），屏幕会模拟打印输出。这能提前发现色彩问题，避免昂贵的打印错误。</p>
+
+        <h2>七、色彩管理最佳实践</h2>
+        <ul>
+            <li>始终在校准的显示器上工作</li>
+            <li>使用合适的工作色彩空间：Web项目用sRGB，打印项目用Adobe RGB</li>
+            <li>保留原始文件的色彩空间，只在最后输出时转换</li>
+            <li>为不同输出方式保存不同版本</li>
+            <li>与印刷厂沟通，获取他们推荐的CMYK配置文件</li>
+            <li>在转换色彩空间前保存副本</li>
+        </ul>
+
+        <h2>八、处理色彩空间警告</h2>
+        <p>打开文件时Photoshop可能提示配置文件不匹配。通常选择：</p>
+        <ul>
+            <li><strong>使用嵌入的配置文件</strong>：保持文件原有的色彩空间</li>
+            <li><strong>转换到工作空间</strong>：如果需要在当前工作流程中处理</li>
+            <li><strong>丢弃配置文件</strong>：很少使用，会失去色彩准确性</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 专业提示：</strong>对于Web项目，始终在sRGB下工作并导出。多数浏览器和设备默认sRGB，使用其他色彩空间可能导致颜色在不同设备上显示不一致。
+        </div>
+
+        <h2>九、常见问题解答</h2>
+        <p><strong>Q: 我的照片在手机上看起来不一样？</strong><br>
+        A: 可能是色彩空间问题。确保导出为sRGB，并嵌入配置文件。</p>
+
+        <p><strong>Q: 打印出来的颜色比屏幕暗？</strong><br>
+        A: 这很正常，显示器发光而纸张反光。使用软打样预览，可能需要调亮图像。</p>
+
+        <p><strong>Q: 要用16位还是8位？</strong><br>
+        A: 16位提供更多色彩信息，适合大量调整的专业工作流程。8位对多数项目已经足够，且文件更小。</p>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>比较同一图像在sRGB和Adobe RGB下的显示</li>
+                <li>将RGB图像转换为CMYK，观察颜色变化</li>
+                <li>使用软打样功能预览打印效果</li>
+                <li>尝试不同的渲染意图，理解它们的差异</li>
+            </ol>
+        </div>
+
+        <p>色彩管理看似复杂，但掌握基本概念后，你会发现它是确保作品颜色准确再现的关键。正确的色彩管理能避免"屏幕上很美，打印出来却不行"的尴尬，让你的作品在任何媒介上都能呈现理想的色彩！</p>
+    </div>
+</body>
+</html>

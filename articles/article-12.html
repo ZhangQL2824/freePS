@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>图像合成艺术：创造超现实视觉作品 - FreePS教程</title>
+    <meta name="description" content="学习如何将多张图片完美融合，通过光影匹配、透视调整等技巧创作出令人震撼的合成作品。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.2em;
+            color: #222;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .meta {
+            color: #999;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #667eea;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>图像合成艺术：创造超现实视觉作品</h1>
+        <div class="meta">🏷️ 创意合成 | ⏱️ 阅读时长: 8分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、图像合成的基本原则</h2>
+        <p>图像合成是将多张照片或元素组合成一个新画面的艺术。成功的合成作品应该让观众相信这是真实存在的场景,即使内容是超现实的。核心原则包括:</p>
+
+        <ul>
+            <li><strong>光线一致</strong>:所有元素的光源方向、色温、光线质量应该统一</li>
+            <li><strong>透视正确</strong>:各元素的视角、消失点应该匹配</li>
+            <li><strong>比例合理</strong>:对象大小符合逻辑(除非刻意营造对比)</li>
+            <li><strong>色彩和谐</strong>:整体色调统一,避免颜色冲突</li>
+            <li><strong>边缘自然</strong>:融合处无明显痕迹</li>
+            <li><strong>细节丰富</strong>:添加阴影、反光、环境光等增强真实感</li>
+        </ul>
+
+        <p>记住:技术是基础,创意是灵魂。再完美的技术如果没有好的创意支撑,作品也会平淡无奇。</p>
+
+        <h2>二、素材选择与准备</h2>
+        <p>合成成功的一半在于选择合适的素材:</p>
+
+        <p><strong>素材选择标准:</strong></p>
+        <ul>
+            <li><strong>分辨率</strong>:所有素材应有相近的分辨率,避免模糊素材与清晰素材混用</li>
+            <li><strong>光线</strong>:优先选择光线方向相近的素材</li>
+            <li><strong>色调</strong>:选择色调接近或容易调整到一致的素材</li>
+            <li><strong>景深</strong>:注意素材的景深关系,远近模糊要合理</li>
+            <li><strong>画质</strong>:噪点、锐度、对比度应相近</li>
+        </ul>
+
+        <p><strong>素材预处理:</strong></p>
+        <ol>
+            <li>先在Camera Raw或Lightroom中调整基本曝光、白平衡</li>
+            <li>统一色温,让所有素材的色调基调一致</li>
+            <li>抠图要精细,边缘质量直接影响最终效果</li>
+            <li>将素材转换为智能对象,保持编辑灵活性</li>
+        </ol>
+
+        <div class="highlight">
+            <strong>💡 专业建议:</strong>建立自己的素材库。按类别收集高质量素材:天空、地面、人物、动物、建筑等。注意标注素材的光源方向和拍摄角度,方便快速找到匹配的素材。
+        </div>
+
+        <h2>三、透视与比例调整</h2>
+        <p>透视不对是合成失败的主要原因之一。调整透视的方法:</p>
+
+        <p><strong>使用自由变换</strong>:</p>
+        <ul>
+            <li>Ctrl+T进入自由变换</li>
+            <li>右键选择"透视"或"扭曲"模式</li>
+            <li>拖动角点调整透视,让对象符合背景的消失点</li>
+            <li>使用参考线辅助对齐</li>
+        </ul>
+
+        <p><strong>使用变形工具</strong>:</p>
+        <ul>
+            <li>"编辑 > 变换 > 变形"</li>
+            <li>调整网格点,让对象贴合背景表面</li>
+            <li>适合将平面图案贴到曲面上(如衣服图案)</li>
+        </ul>
+
+        <p><strong>消失点滤镜</strong>:</p>
+        <ul>
+            <li>"滤镜 > 消失点"</li>
+            <li>定义场景的透视平面</li>
+            <li>粘贴对象会自动匹配透视</li>
+            <li>适合建筑类合成</li>
+        </ul>
+
+        <h2>四、光影匹配技巧</h2>
+        <p>光影是合成真实感的关键。必须让新添加的元素看起来受到同样的光照:</p>
+
+        <p><strong>分析光源:</strong></p>
+        <ol>
+            <li>观察背景的光源位置(左上?右侧?)</li>
+            <li>判断光线性质(硬光还是柔光?)</li>
+            <li>确定光线颜色(暖调还是冷调?)</li>
+            <li>注意环境光反射</li>
+        </ol>
+
+        <p><strong>添加阴影:</strong></p>
+        <ol>
+            <li>创建新图层,命名为"阴影"</li>
+            <li>用黑色柔软画笔在对象下方绘制阴影</li>
+            <li>混合模式改为"正片叠底",降低不透明度</li>
+            <li>使用高斯模糊柔化阴影</li>
+            <li>近处阴影深且清晰,远处阴影浅且模糊</li>
+            <li>阴影方向应与光源相反</li>
+        </ol>
+
+        <p><strong>添加高光:</strong></p>
+        <ol>
+            <li>创建新图层,混合模式"滤色"或"叠加"</li>
+            <li>用白色画笔在受光面涂抹</li>
+            <li>降低不透明度到合适程度</li>
+        </ol>
+
+        <p><strong>环境光影响:</strong></p>
+        <ul>
+            <li>如果背景是草地,对象底部应该有绿色反光</li>
+            <li>如果背景是日落,所有对象应该有暖色调</li>
+            <li>使用色彩平衡或曲线调整图层添加环境色</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 光影技巧:</strong>创建一个"光影参考"图层,用简单几何体(球体、立方体)放在场景中,添加光影。这可以作为其他对象光影的参考,确保光线一致。
+        </div>
+
+        <h2>五、颜色与色调统一</h2>
+        <p>即使抠图和光影都完美,如果色调不统一,合成仍会显得假。统一色调的方法:</p>
+
+        <p><strong>整体调色法:</strong></p>
+        <ol>
+            <li>完成基本合成后,在最上方添加调整图层</li>
+            <li>使用色彩平衡、曲线或Camera Raw滤镜调整整体色调</li>
+            <li>让所有元素都受到相同的调色影响</li>
+        </ol>
+
+        <p><strong>匹配颜色法:</strong></p>
+        <ol>
+            <li>选中需要调整的图层</li>
+            <li>"图像 > 调整 > 匹配颜色"</li>
+            <li>源选择背景图层</li>
+            <li>调整强度和选项,让颜色匹配背景</li>
+        </ol>
+
+        <p><strong>统一光线色温:</strong></p>
+        <ul>
+            <li>日出日落:添加暖色(橙黄色)</li>
+            <li>阴天:添加冷色(蓝色)</li>
+            <li>室内:根据光源(暖色白炽灯或冷色日光灯)</li>
+        </ul>
+
+        <h2>六、边缘融合技术</h2>
+        <p>完美的边缘处理能让合成天衣无缝:</p>
+
+        <p><strong>蒙版羽化:</strong></p>
+        <ul>
+            <li>选中图层蒙版,在属性面板调整羽化值</li>
+            <li>一般设置0.5-2像素</li>
+            <li>让边缘有轻微过渡</li>
+        </ul>
+
+        <p><strong>渐变蒙版融合:</strong></p>
+        <ul>
+            <li>在蒙版上使用渐变工具</li>
+            <li>让对象边缘逐渐淡出</li>
+            <li>适合融合大面积区域(如天空)</li>
+        </ul>
+
+        <p><strong>画笔手动融合:</strong></p>
+        <ul>
+            <li>使用柔软画笔,低不透明度(10-30%)</li>
+            <li>在蒙版上用黑色轻柔涂抹边缘</li>
+            <li>多次涂抹创造自然过渡</li>
+        </ul>
+
+        <p><strong>添加边缘光:</strong></p>
+        <ul>
+            <li>创建新图层,混合模式"滤色"</li>
+            <li>用亮色画笔在对象边缘描边</li>
+            <li>模拟环境光或逆光效果</li>
+            <li>增强对象的立体感和融入感</li>
+        </ul>
+
+        <h2>七、景深与模糊处理</h2>
+        <p>符合景深规律能大幅提升真实感:</p>
+
+        <p><strong>基本原则:</strong></p>
+        <ul>
+            <li>焦点区域清晰</li>
+            <li>前景和远景适当模糊</li>
+            <li>距离越远,模糊程度越高</li>
+            <li>大光圈效果:主体清晰,背景模糊</li>
+        </ul>
+
+        <p><strong>添加景深模糊:</strong></p>
+        <ol>
+            <li>将需要模糊的图层转换为智能对象</li>
+            <li>应用"滤镜 > 模糊画廊 > 场景模糊"或"光圈模糊"</li>
+            <li>调整模糊量,远处更模糊</li>
+            <li>使用"滤镜 > 模糊画廊 > 倾斜偏移"创建移轴效果</li>
+        </ol>
+
+        <h2>八、细节完善</h2>
+        <p>专业合成与业余合成的区别往往在于细节:</p>
+
+        <ul>
+            <li><strong>地面交互</strong>:对象与地面接触处应该有阴影、反光或压痕</li>
+            <li><strong>大气透视</strong>:远景应该偏蓝、对比度降低、模糊</li>
+            <li><strong>反射</strong>:在水面、镜面、光滑地面添加倒影</li>
+            <li><strong>颗粒统一</strong>:添加统一的颗粒/噪点让所有元素融为一体</li>
+            <li><strong>光晕</strong>:在强光源处添加镜头光晕增强真实感</li>
+            <li><strong>色差</strong>:适当添加镜头色差模拟相机拍摄</li>
+        </ul>
+
+        <h2>九、合成工作流程示例</h2>
+        <p>以"人物站在陌生星球"为例的完整流程:</p>
+
+        <ol>
+            <li>选择星球背景图,调整曝光和色调</li>
+            <li>精确抠出人物,调整大小和位置</li>
+            <li>调整人物透视,匹配背景视角</li>
+            <li>分析背景光源(假设光从右上来)</li>
+            <li>为人物添加与光源方向一致的阴影</li>
+            <li>用色彩平衡为人物添加星球环境光(如火星的橙红色)</li>
+            <li>在人物左侧(背光面)添加环境光反射</li>
+            <li>用曲线或色阶匹配人物与背景的对比度</li>
+            <li>为远景添加大气模糊</li>
+            <li>整体调色,统一色调</li>
+            <li>添加颗粒和细微的晕影</li>
+            <li>最后锐化,完成</li>
+        </ol>
+
+        <div class="highlight">
+            <strong>🎯 练习建议:</strong>
+            <ol>
+                <li>从简单合成开始:将一个对象放入新背景</li>
+                <li>专门练习光影添加,让对象看起来真实存在</li>
+                <li>尝试复杂合成:多个对象,不同光源</li>
+                <li>模仿优秀合成作品,分析其光影处理</li>
+                <li>创作一个超现实场景,挑战自己的想象力</li>
+                <li>建立合成检查清单,确保不遗漏细节</li>
+            </ol>
+        </div>
+
+        <p>图像合成是技术与艺术的完美结合。技术确保作品看起来真实,艺术赋予作品灵魂和情感。不断练习,培养观察光影的能力,积累素材库,你将能创作出令人惊叹的合成作品。记住,最好的合成往往是那些让人忘记它是合成的作品。</p>
+    </div>
+</body>
+</html>

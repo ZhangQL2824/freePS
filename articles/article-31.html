@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>印刷设计要点：从屏幕到纸张的完美转换 - FreePS教程</title>
+    <meta name="description" content="印刷品设计有其特殊要求，本文讲解分辨率、出血、色彩模式等印刷相关的重要概念和注意事项。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>印刷设计要点：从屏幕到纸张的完美转换</h1>
+        <div class="meta">🏷️ 印刷知识 | ⏱️ 阅读时长: 6分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、印刷与屏幕显示的区别</h2>
+        <p>屏幕显示和印刷是两种完全不同的媒介。屏幕通过发光显示颜色（加色模式），而印刷通过墨水反射光线（减色模式）。这导致了一系列重要差异，理解这些差异是创作高质量印刷品的基础。</p>
+
+        <h2>二、分辨率要求</h2>
+        <p>印刷品需要比屏幕显示更高的分辨率：</p>
+        <ul>
+            <li><strong>屏幕显示</strong>：72-96 PPI（Pixels Per Inch）足够</li>
+            <li><strong>一般印刷</strong>：300 PPI是标准，确保清晰输出</li>
+            <li><strong>高质量印刷</strong>：350-600 PPI用于杂志、画册等</li>
+            <li><strong>大幅面印刷</strong>：150-200 PPI，因为观看距离远</li>
+        </ul>
+        <p>在Photoshop中创建新文档时，在"图像 > 图像大小"中设置分辨率。记住：分辨率×尺寸=总像素数。300 PPI的10x15cm照片需要1181x1772像素。</p>
+
+        <h2>三、色彩模式：CMYK vs RGB</h2>
+        <p>印刷使用CMYK色彩模式（青、品红、黄、黑）。虽然设计时可以在RGB下工作，但最终需要转换为CMYK：</p>
+        <ul>
+            <li>在RGB下完成所有编辑和调色</li>
+            <li>转换前保存RGB版本作为存档</li>
+            <li>使用"编辑 > 转换为配置文件"转换到CMYK</li>
+            <li>选择印刷厂提供的CMYK配置文件</li>
+            <li>检查色彩变化，特别是鲜艳的蓝色、绿色、橙色</li>
+        </ul>
+
+        <h2>四、出血与安全区域</h2>
+        <p><strong>出血（Bleed）</strong><br>
+        印刷时纸张会被裁切，如果设计元素到达边缘，需要延伸到裁切线外3-5mm，这叫出血。否则裁切误差会留下白边。</p>
+        <p>设置方法：创建新文档时，在"出血"设置中输入3-5mm。Photoshop会显示红色参考线标记出血区域。</p>
+        <p><strong>安全区域</strong><br>
+        距离裁切边缘3-5mm的区域内，避免放置重要文字和图形，因为裁切误差可能切到它们。</p>
+
+        <h2>五、字体与文字处理</h2>
+        <ul>
+            <li><strong>最小字号</strong>：正文至少8pt，更小的文字可能印刷不清</li>
+            <li><strong>字体选择</strong>：确保使用可商用字体，避免版权问题</li>
+            <li><strong>黑色文字</strong>：使用纯黑（K100）而非四色黑，避免套印不准</li>
+            <li><strong>栅格化文字</strong>：最终文件中可以保持文字图层，但建议保留源文件</li>
+            <li><strong>抗锯齿</strong>：小字号使用"锐利"抗锯齿，大字号使用"平滑"</li>
+        </ul>
+
+        <h2>六、黑色的处理</h2>
+        <p>印刷中的黑色需要特别注意：</p>
+        <ul>
+            <li><strong>纯黑文字</strong>：K100（单色黑），清晰且不会套印不准</li>
+            <li><strong>图像中的黑色</strong>：可以使用四色黑或富黑（C40 M40 Y40 K100）获得更深的黑</li>
+            <li><strong>大面积黑色</strong>：使用富黑避免显得灰暗</li>
+            <li><strong>避免多色叠加</strong>：CMYK总和不要超过300%，避免墨水过多</li>
+        </ul>
+
+        <h2>七、文件格式与交付</h2>
+        <p>与印刷厂沟通后，通常需要提供：</p>
+        <ul>
+            <li><strong>PSD/TIFF</strong>：保留所有图层，用于后续修改</li>
+            <li><strong>PDF</strong>：最常用的印刷文件格式，使用"PDF/X-1a"或"PDF/X-4"标准</li>
+            <li><strong>嵌入字体和图像</strong>：确保所有元素都包含在文件中</li>
+            <li><strong>转换为CMYK</strong>：除非印刷厂要求RGB</li>
+            <li><strong>平整透明度</strong>：避免印刷时出现意外</li>
+        </ul>
+
+        <h2>八、印刷前检查清单</h2>
+        <ol>
+            <li>分辨率是否达到300 PPI？</li>
+            <li>色彩模式是否为CMYK（或按印刷厂要求）？</li>
+            <li>是否设置了正确的出血和安全区域？</li>
+            <li>重要元素是否在安全区域内？</li>
+            <li>黑色文字是否使用K100？</li>
+            <li>是否使用了可商用字体？</li>
+            <li>文件尺寸是否正确（加上出血）？</li>
+            <li>是否嵌入了所有字体和图像？</li>
+            <li>是否与印刷厂确认了技术规格？</li>
+        </ol>
+
+        <h2>九、常见印刷问题及解决</h2>
+        <p><strong>颜色偏差</strong>：使用校准的显示器，索要印刷样品，使用软打样预览。</p>
+        <p><strong>图像模糊</strong>：检查分辨率，确保至少300 PPI。</p>
+        <p><strong>白边</strong>：确保设置了出血，背景延伸到出血区域。</p>
+        <p><strong>文字模糊</strong>：避免将文字缩放得太小，使用合适的抗锯齿设置。</p>
+
+        <h2>十、不同印刷品的特殊考虑</h2>
+        <p><strong>名片</strong>：90x54mm + 3mm出血，注意文字大小和可读性。</p>
+        <p><strong>海报</strong>：大尺寸可以用较低分辨率（150-200 PPI），注意远观效果。</p>
+        <p><strong>画册</strong>：注意跨页设计的连续性，装订边留出额外空间。</p>
+        <p><strong>包装</strong>：可能需要专色（Pantone），与印刷厂沟通具体工艺。</p>
+
+        <div class="highlight">
+            <strong>💡 专业建议：</strong>在正式大量印刷前，务必要求印刷厂提供打样（proof）。数字打样虽然方便，但传统打样能更准确地呈现最终效果。不要因为省小钱而冒大风险！
+        </div>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>创建一个带出血的名片设计（93x57mm，含3mm出血）</li>
+                <li>将RGB作品转换为CMYK，观察并调整色彩变化</li>
+                <li>设置安全区域参考线，确保文字在安全范围内</li>
+                <li>导出符合印刷要求的PDF文件</li>
+            </ol>
+        </div>
+
+        <p>印刷设计需要考虑许多屏幕设计不需要关注的技术细节。通过掌握这些要点，你可以确保设计作品从屏幕到纸张的完美呈现，避免昂贵的印刷错误。与印刷厂保持良好沟通，遵循他们的技术规格，是成功印刷的关键！</p>
+    </div>
+</body>
+</html>

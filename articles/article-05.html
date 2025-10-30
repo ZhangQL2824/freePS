@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>颜色理论与调色技巧：让你的作品色彩动人 - FreePS教程</title>
+    <meta name="description" content="颜色是视觉设计的核心要素，本文从色彩理论入手，讲解如何在PS中进行专业的调色操作，提升作品质感。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.8;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .back-link:hover { text-decoration: underline; }
+        h1 {
+            font-size: 2.2em;
+            color: #222;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+        .meta {
+            color: #999;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #eee;
+        }
+        h2 {
+            font-size: 1.6em;
+            color: #333;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 12px;
+            border-left: 4px solid #667eea;
+        }
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        strong {
+            color: #667eea;
+            font-weight: 600;
+        }
+        .highlight {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #667eea;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>颜色理论与调色技巧：让你的作品色彩动人</h1>
+        <div class="meta">🏷️ 色彩处理 | ⏱️ 阅读时长: 7分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、色彩理论基础</h2>
+        <p>色彩是设计中最具情感表达力的元素。理解色彩理论不仅能帮助你选择合适的颜色组合，还能通过色彩传递情绪和氛围。色彩主要由三个属性定义：</p>
+
+        <ul>
+            <li><strong>色相（Hue）</strong>：颜色的基本属性，即我们通常说的"什么颜色"。色相在色轮上呈环形分布，包括红、橙、黄、绿、青、蓝、紫等。</li>
+            <li><strong>饱和度（Saturation）</strong>：颜色的纯度或鲜艳程度。高饱和度的颜色鲜艳醒目，低饱和度则趋向灰色，显得柔和含蓄。</li>
+            <li><strong>明度（Lightness/Brightness）</strong>：颜色的明暗程度。明度高的颜色接近白色，明度低的颜色接近黑色。</li>
+        </ul>
+
+        <p>掌握这三个属性的关系，是进行精确调色的基础。在Photoshop中，可以通过HSB（色相/饱和度/明度）模式直观地调整这些属性。</p>
+
+        <h2>二、色彩搭配原理</h2>
+        <p>优秀的色彩搭配能让作品更具吸引力和专业感。以下是几种经典的配色方案：</p>
+
+        <p><strong>互补色搭配</strong>：色轮上相对位置的颜色，如红与绿、蓝与橙。互补色对比强烈，能产生强烈的视觉冲击力，适合需要突出重点的设计。</p>
+
+        <p><strong>类似色搭配</strong>：色轮上相邻的颜色，如蓝、蓝绿、绿。类似色搭配和谐统一，营造出舒适柔和的氛围，常用于营造宁静、自然的感觉。</p>
+
+        <p><strong>三角色搭配</strong>：色轮上等距离的三个颜色，如红、黄、蓝。这种搭配平衡而充满活力，适合需要丰富色彩但又保持和谐的设计。</p>
+
+        <p><strong>单色搭配</strong>：使用同一色相的不同明度和饱和度。这种搭配最为和谐统一，适合营造简洁优雅的氛围。</p>
+
+        <div class="highlight">
+            <strong>💡 色彩心理学：</strong>不同颜色能唤起不同的情感。红色代表热情和紧迫，蓝色传递信任和平静，绿色象征自然和健康，黄色带来活力和快乐。选择颜色时，考虑你想传达的情感信息。
+        </div>
+
+        <h2>三、Photoshop调色工具概览</h2>
+        <p>Photoshop提供了丰富的调色工具，每种工具都有其特定的用途：</p>
+
+        <ul>
+            <li><strong>色阶（Levels）</strong>：通过调整图像的黑场、白场和中间调，控制整体明暗和对比度。这是最基础的调色工具。</li>
+            <li><strong>曲线（Curves）</strong>：最强大的调色工具，可以精确控制图像不同亮度范围的色调。掌握曲线是专业调色的关键。</li>
+            <li><strong>色相/饱和度（Hue/Saturation）</strong>：调整整体或特定颜色的色相、饱和度和明度。可以单独调整某一颜色，非常灵活。</li>
+            <li><strong>色彩平衡（Color Balance）</strong>：分别调整高光、中间调和阴影的色彩倾向，适合营造特定色调氛围。</li>
+            <li><strong>可选颜色（Selective Color）</strong>：针对特定颜色进行CMYK通道的调整，是商业修图中的专业工具。</li>
+            <li><strong>照片滤镜（Photo Filter）</strong>：模拟传统相机滤镜效果，快速为图像添加暖调或冷调。</li>
+        </ul>
+
+        <h2>四、使用曲线进行精确调色</h2>
+        <p>曲线工具（Ctrl+M）是最强大的调色工具，值得深入学习。曲线界面显示了输入（原始亮度）和输出（调整后亮度）的关系。</p>
+
+        <p><strong>基础调整技巧</strong>：</p>
+        <ol>
+            <li>在曲线上点击并拖动可以创建控制点，向上拖动提亮，向下拖动压暗</li>
+            <li>曲线左下角控制暗部，右上角控制亮部，中间控制中间调</li>
+            <li>S形曲线能增强对比度：提亮亮部，压暗暗部</li>
+            <li>反S形曲线降低对比度，营造柔和朦胧的效果</li>
+        </ol>
+
+        <p><strong>分通道调整</strong>：点击"RGB"下拉菜单，可以单独调整红、绿、蓝通道。这是实现色彩校正和创意调色的关键：</p>
+        <ul>
+            <li>提升红色通道的亮部，画面偏红；压暗则偏青</li>
+            <li>提升绿色通道的亮部，画面偏绿；压暗则偏洋红</li>
+            <li>提升蓝色通道的亮部，画面偏蓝；压暗则偏黄</li>
+        </ul>
+
+        <p>通过在不同通道的高光、中间调、阴影部分进行微调，可以创造出无穷的色彩效果。例如，在蓝色通道的阴影部分向上提升可以为暗部添加蓝色调，营造冷色氛围。</p>
+
+        <div class="highlight">
+            <strong>💡 专业技巧：</strong>使用吸管工具在曲线面板中点击图像，可以自动在曲线上标记该点的位置，便于精确调整特定亮度区域。按住Ctrl点击图像可以直接在曲线上创建对应点。
+        </div>
+
+        <h2>五、色彩分级技术</h2>
+        <p>色彩分级（Color Grading）是电影和高级摄影中的专业技术，能为作品赋予独特的视觉风格和情感基调。</p>
+
+        <p><strong>实现方法一：曲线分通道调色</strong>。如前所述，在RGB各通道的高光和阴影部分进行微调。经典的电影色调如"橙青色调"就是通过在蓝色通道的阴影部分添加蓝色，在红色和绿色通道的高光部分添加橙色实现的。</p>
+
+        <p><strong>实现方法二：色彩平衡</strong>。"图像 > 调整 > 色彩平衡"工具允许你分别为阴影、中间调和高光设置不同的色彩倾向。这种方法更加直观，适合快速营造氛围。</p>
+
+        <p><strong>实现方法三：分离色调</strong>。创建两个纯色图层，一个设置为"颜色减淡"混合模式（影响高光），另一个设置为"颜色加深"模式（影响阴影），调整颜色和不透明度即可实现分离色调效果。</p>
+
+        <h2>六、常见调色场景实战</h2>
+        <p><strong>场景1：矫正偏色照片</strong>。如果照片整体偏黄，使用色阶或曲线的灰色吸管点击画面中应该是灰色的部分（如白墙），Photoshop会自动校正白平衡。也可以使用色彩平衡工具，手动向相反方向调整。</p>
+
+        <p><strong>场景2：营造暖调氛围</strong>。使用照片滤镜添加暖色滤镜（黄色或橙色），或使用色彩平衡在中间调和高光部分添加红色和黄色。降低蓝色通道的对比度也能产生温暖感。</p>
+
+        <p><strong>场景3：制作冷色调</strong>。与暖调相反，向蓝色和青色方向调整。使用色相/饱和度降低红色和黄色的饱和度，同时提升蓝色饱和度。</p>
+
+        <p><strong>场景4：增强色彩鲜艳度</strong>。使用"自然饱和度"调整（比普通饱和度更智能，不会过度饱和已经很鲜艳的颜色）。配合曲线增强对比度，色彩会显得更加通透明亮。</p>
+
+        <p><strong>场景5：营造复古胶片感</strong>。降低对比度，在阴影部分添加少量颜色（如蓝色或青色），轻微降低饱和度，添加颗粒效果。可以使用曲线将黑场稍微提升（不让暗部完全黑），这是胶片的典型特征。</p>
+
+        <h2>七、使用调整图层非破坏性调色</h2>
+        <p>所有的调色操作都应该使用调整图层来完成，而不是直接在原图上调整。调整图层的优势在于：</p>
+
+        <ul>
+            <li>可以随时修改参数，不会损失图像质量</li>
+            <li>可以通过调整不透明度控制效果强度</li>
+            <li>配合图层蒙版可以局部应用调整</li>
+            <li>可以随时开关调整图层对比效果</li>
+            <li>多个调整图层可以叠加使用，创造复杂效果</li>
+        </ul>
+
+        <p>在图层面板底部点击"创建新的填充或调整图层"按钮，选择需要的调整类型。每个调整图层都自带蒙版，可以用画笔在蒙版上涂抹黑色隐藏效果，涂抹白色显示效果，实现局部调色。</p>
+
+        <div class="highlight">
+            <strong>💡 工作流建议：</strong>建立自己的调色风格预设。当找到满意的调色效果后，可以将多个调整图层编组保存。下次遇到类似照片，直接将这组调整应用过去，再根据具体情况微调，大大提升效率。
+        </div>
+
+        <h2>八、色彩和谐性检查</h2>
+        <p>完成调色后，需要检查整体效果是否和谐：</p>
+
+        <ol>
+            <li><strong>查看直方图</strong>：确保色调分布合理，没有过度曝光或欠曝的情况</li>
+            <li><strong>切换到灰度模式查看</strong>：创建黑白调整图层，检查明暗关系是否合理</li>
+            <li><strong>在不同设备上查看</strong>：不同显示器的色彩表现有差异，在手机或其他屏幕上检查效果</li>
+            <li><strong>休息后再看</strong>：眼睛会适应当前色彩，离开一段时间后再回来查看，能更客观地评估效果</li>
+        </ol>
+
+        <div class="highlight">
+            <strong>🎯 练习建议：</strong>
+            <ol>
+                <li>收集你喜欢的照片或设计作品，分析它们的配色方案</li>
+                <li>尝试用曲线调整重现某张电影截图的色调</li>
+                <li>拍摄或找一张普通照片，尝试调出暖调、冷调、复古等不同风格</li>
+                <li>练习使用色相/饱和度工具改变物体的颜色，如将红色花朵变成蓝色</li>
+                <li>创建自己的调色预设库，积累常用的色调风格</li>
+            </ol>
+        </div>
+
+        <p>调色是一门艺术，需要理论知识与大量实践相结合。多观察优秀作品，多实验不同的调色方案，逐渐形成自己的色彩审美和风格。记住，没有绝对正确的调色，关键是色彩能否准确传达你想要的情感和氛围。</p>
+    </div>
+</body>
+</html>

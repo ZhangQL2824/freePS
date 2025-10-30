@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web图像优化：平衡质量与文件大小 - FreePS教程</title>
+    <meta name="description" content="网页图片需要在质量和大小间找到平衡，本文介绍各种图片格式的特点以及导出优化的最佳实践。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>Web图像优化：平衡质量与文件大小</h1>
+        <div class="meta">🏷️ Web优化 | ⏱️ 阅读时长: 5分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、为什么Web图像优化很重要</h2>
+        <p>网页加载速度直接影响用户体验和SEO排名。图片通常占网页总大小的60-70%，优化图片是提升网站性能的关键。目标是在保持可接受的视觉质量的同时，尽可能减小文件大小。</p>
+
+        <h2>二、选择正确的图片格式</h2>
+        <p><strong>JPEG</strong>：适合照片和复杂图像，有损压缩，文件小。质量设置60-80通常是最佳平衡点。不支持透明度。</p>
+        <p><strong>PNG</strong>：适合图标、Logo、需要透明背景的图像。PNG-8支持256色和透明度，PNG-24支持全彩和Alpha透明通道。无损压缩，文件较大。</p>
+        <p><strong>WebP</strong>：现代格式，同时支持有损和无损压缩，比JPEG小25-35%且质量相当，支持透明度。主流浏览器已支持，推荐使用。</p>
+        <p><strong>SVG</strong>：矢量格式，适合图标、Logo等简单图形。无论如何缩放都不失真，文件极小。</p>
+
+        <h2>三、导出Web图像</h2>
+        <p>使用"文件 > 导出 > 导出为"（或旧版的"存储为Web所用格式"）：</p>
+        <ul>
+            <li>选择合适的格式</li>
+            <li>调整质量滑块，实时预览文件大小</li>
+            <li>JPEG质量60-80通常足够</li>
+            <li>PNG选择PNG-8或PNG-24</li>
+            <li>勾选"转换为sRGB"确保颜色一致性</li>
+            <li>设置合适的图像尺寸</li>
+        </ul>
+
+        <h2>四、响应式图像</h2>
+        <p>现代网站需要为不同设备提供不同尺寸的图片：</p>
+        <ul>
+            <li>移动设备：宽度750-1125px</li>
+            <li>平板：宽度1536-2048px</li>
+            <li>桌面：宽度1920-2560px</li>
+            <li>Retina显示器：尺寸x2</li>
+        </ul>
+        <p>使用Photoshop的图像资源生成器或批处理功能可以快速生成多个尺寸版本。</p>
+
+        <h2>五、优化技巧</h2>
+        <ul>
+            <li><strong>裁剪多余空间</strong>：只保留必要的内容</li>
+            <li><strong>降低分辨率</strong>：Web显示只需72ppi</li>
+            <li><strong>模糊背景</strong>：主体清晰，背景略微模糊可以大幅减小文件</li>
+            <li><strong>减少颜色</strong>：PNG-8限制颜色数可以减小文件</li>
+            <li><strong>使用压缩工具</strong>：TinyPNG、ImageOptim等可以进一步无损压缩</li>
+        </ul>
+
+        <h2>六、为不同用途优化</h2>
+        <p><strong>英雄图像</strong>：网页顶部大图，质量80，WebP格式，提供多个尺寸</p>
+        <p><strong>产品图</strong>：质量75-85，支持放大查看</p>
+        <p><strong>缩略图</strong>：质量60-70，尺寸300-500px</p>
+        <p><strong>背景图</strong>：质量50-60，可以适度压缩</p>
+
+        <div class="highlight">
+            <strong>💡 最佳实践：</strong>
+            <ul>
+                <li>使用懒加载（lazy loading）延迟加载视口外的图片</li>
+                <li>实施图片CDN加速分发</li>
+                <li>使用picture元素为不同设备提供最优图片</li>
+                <li>考虑使用渐进式JPEG，让图片逐步加载显示</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <strong>🎯 实践练习：</strong>
+            <ol>
+                <li>将同一张图片导出为不同格式和质量，比较大小和视觉效果</li>
+                <li>创建一组响应式图片（移动、平板、桌面版本）</li>
+                <li>使用在线压缩工具进一步优化已导出的图片</li>
+            </ol>
+        </div>
+
+        <p>Web图像优化是提升网站性能的关键环节。通过选择合适的格式、调整质量参数和使用现代优化技术，你可以在保持良好视觉效果的同时大幅减小文件大小，为用户提供更快的加载体验！</p>
+    </div>
+</body>
+</html>

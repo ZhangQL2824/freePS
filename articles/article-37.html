@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>性能优化技巧：让PS运行更流畅 - FreePS教程</title>
+    <meta name="description" content="大文件编辑时PS可能变慢，本文分享内存设置、暂存盘配置、历史记录优化等性能调优技巧。">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; font-weight: 500; }
+        h1 { font-size: 2.2em; color: #222; margin-bottom: 10px; }
+        .meta { color: #999; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #eee; }
+        h2 { font-size: 1.6em; color: #333; margin-top: 30px; margin-bottom: 15px; padding-left: 12px; border-left: 4px solid #667eea; }
+        p { margin-bottom: 15px; }
+        ul { margin: 15px 0 15px 30px; }
+        li { margin-bottom: 10px; }
+        strong { color: #667eea; font-weight: 600; }
+        .highlight { background: #f0f4ff; padding: 20px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #667eea; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="../articles.html" class="back-link">← 返回文章列表</a>
+        <h1>性能优化技巧：让PS运行更流畅</h1>
+        <div class="meta">🏷️ 性能优化 | ⏱️ 阅读时长: 5分钟 | 📅 更新时间: 2024年</div>
+
+        <h2>一、内存分配</h2>
+        <p>在"编辑 > 首选项 > 性能"中，可以调整Photoshop使用的内存：</p>
+        <ul>
+            <li>默认使用70%系统RAM，可以调整到80-85%</li>
+            <li>不要设置100%，系统和其他程序也需要内存</li>
+            <li>8GB RAM是最低要求，16GB较舒适，32GB+适合专业工作</li>
+            <li>修改后需要重启Photoshop生效</li>
+        </ul>
+
+        <h2>二、暂存盘设置</h2>
+        <p>当RAM不足时，Photoshop使用硬盘作为虚拟内存（暂存盘）。在"性能"首选项中：</p>
+        <ul>
+            <li><strong>使用SSD</strong>：SSD比机械硬盘快10-100倍，优先选择SSD作为暂存盘</li>
+            <li><strong>独立分区</strong>：最好使用系统盘外的独立分区或硬盘</li>
+            <li><strong>多个暂存盘</strong>：可以设置多个暂存盘，Photoshop会依次使用</li>
+            <li><strong>充足空间</strong>：确保暂存盘有至少100GB可用空间</li>
+            <li><strong>定期清理</strong>：编辑 > 清理 > 全部，释放暂存盘空间</li>
+        </ul>
+
+        <h2>三、历史记录优化</h2>
+        <ul>
+            <li>减少历史记录步数到20-50步（默认20）</li>
+            <li>更多历史记录占用更多内存</li>
+            <li>重要节点使用快照而非依赖大量历史记录</li>
+            <li>完成阶段性工作后清除历史记录</li>
+        </ul>
+
+        <h2>四、图形处理器设置</h2>
+        <p>在"性能"首选项中：</p>
+        <ul>
+            <li>确保"使用图形处理器"已勾选</li>
+            <li>点击"高级设置"，选择性能模式（基本、正常、高级）</li>
+            <li>高级模式使用更多GPU资源，提供更好性能</li>
+            <li>如果遇到显示问题，可以降低到正常或基本模式</li>
+        </ul>
+
+        <h2>五、缓存级别和拼贴大小</h2>
+        <ul>
+            <li><strong>缓存级别</strong>：2-8之间，较高值适合大图像，较低值适合小图层文件</li>
+            <li><strong>缓存拼贴大小</strong>：128K适合大平面图像，1024K适合多图层小文件</li>
+            <li>使用预设：巨型像素大小（大照片）、默认/Web（平衡）、较多小图层（设计项目）</li>
+        </ul>
+
+        <h2>六、工作习惯优化</h2>
+        <ul>
+            <li><strong>智能对象</strong>：谨慎使用，智能对象占用更多内存</li>
+            <li><strong>合并图层</strong>：完成阶段后合并不再需要独立编辑的图层</li>
+            <li><strong>删除空图层</strong>：定期清理空白和不需要的图层</li>
+            <li><strong>适当分辨率</strong>：不要使用超过需要的分辨率</li>
+            <li><strong>裁剪多余部分</strong>：裁掉画布外不需要的内容</li>
+        </ul>
+
+        <h2>七、文件管理</h2>
+        <ul>
+            <li>定期保存，避免文件过大导致保存缓慢</li>
+            <li>使用"文件 > 存储为"替代"存储"，能减小文件大小</li>
+            <li>关闭不需要的文档，每个打开的文件都占用内存</li>
+            <li>大项目分解成多个文件，最后合成</li>
+        </ul>
+
+        <h2>八、其他优化技巧</h2>
+        <ul>
+            <li>关闭缩略图预览：在图层面板选项中关闭或减小缩略图</li>
+            <li>禁用字体预览：在"文字"首选项中关闭字体预览</li>
+            <li>减少预设：删除不使用的画笔、样式、动作等预设</li>
+            <li>更新显卡驱动：确保使用最新驱动程序</li>
+            <li>关闭后台程序：运行Photoshop时关闭不必要的其他应用</li>
+        </ul>
+
+        <h2>九、硬件升级建议</h2>
+        <p>如果经常处理大文件，考虑硬件升级：</p>
+        <ul>
+            <li><strong>优先级1：内存</strong>：升级到16GB或32GB RAM</li>
+            <li><strong>优先级2：SSD</strong>：使用NVMe SSD作为暂存盘</li>
+            <li><strong>优先级3：CPU</strong>：多核高频CPU</li>
+            <li><strong>优先级4：GPU</strong>：支持CUDA的显卡</li>
+        </ul>
+
+        <h2>十、监控性能</h2>
+        <p>点击文档窗口底部的箭头，显示"效率"：</p>
+        <ul>
+            <li>100%：完全使用RAM，最佳性能</li>
+            <li>低于100%：使用暂存盘，性能下降</li>
+            <li>如果经常低于95%，考虑增加RAM或优化文件</li>
+        </ul>
+
+        <div class="highlight">
+            <strong>💡 快速性能提升清单：</strong>
+            <ol>
+                <li>将Photoshop内存分配增加到75-85%</li>
+                <li>设置SSD为第一暂存盘</li>
+                <li>减少历史记录步数到30</li>
+                <li>启用GPU加速并设置为高级模式</li>
+                <li>定期清理暂存盘和历史记录</li>
+            </ol>
+        </div>
+
+        <div class="highlight">
+            <strong>🎯 检查任务：</strong>
+            <ol>
+                <li>检查当前内存分配，优化到合理值</li>
+                <li>确认暂存盘设置，优先使用SSD</li>
+                <li>检查效率指标，了解当前性能状态</li>
+                <li>清理不需要的预设和插件</li>
+            </ol>
+        </div>
+
+        <p>Photoshop性能优化是持续的过程。合理的设置加上良好的工作习惯，即使在中等配置的电脑上也能流畅工作。记住，硬件有限但优化无限，充分利用现有资源才是王道！</p>
+    </div>
+</body>
+</html>
